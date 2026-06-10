@@ -1,1824 +1,1816 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "Proper Child International School",
-  "url": "http://properchildintlschool.dedyn.io"
-}
-</script>
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proper Child International School</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
-    <style>
-        /* CSS Variables */
-        :root {
-            --primary-blue: #3498db;
-            --primary-yellow: #f1c40f;
-            --primary-green: #2ecc71;
-            --primary-red: #e74c3c;
-            --primary-purple: #9b59b6;
-            --white: #ffffff;
-            --light-gray: #f9f9f9;
-            --dark-gray: #34495e;
-            --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            --box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-            --border-radius: 16px;
-            --header-height: 80px;
-        }
-
-        /* Reset and Base Styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-            font-size: 16px;
-        }
-
-        body {
-            font-family: 'Quicksand', sans-serif;
-            line-height: 1.6;
-            color: var(--dark-gray);
-            background-color: var(--white);
-            overflow-x: hidden;
-        }
-
-        h1, h2, h3, h4 {
-            font-family: 'Fredoka', sans-serif;
-            font-weight: 600;
-            line-height: 1.3;
-            margin-bottom: 1rem;
-        }
-
-        p {
-            margin-bottom: 1rem;
-        }
-
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
-
-        img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 15px;
-        }
-
-        .btn {
-            display: inline-block;
-            background: linear-gradient(135deg, var(--primary-blue), var(--primary-purple));
-            color: var(--white);
-            padding: 14px 28px;
-            border: none;
-            border-radius: 50px;
-            cursor: pointer;
-            transition: var(--transition);
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            position: relative;
-            overflow: hidden;
-            z-index: 1;
-            font-size: 1rem;
-        }
-
-        .btn::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 0;
-            height: 100%;
-            background: linear-gradient(135deg, var(--primary-purple), var(--primary-blue));
-            transition: var(--transition);
-            z-index: -1;
-        }
-
-        .btn:hover::before {
-            width: 100%;
-        }
-
-        .btn:hover {
-            transform: translateY(-5px) scale(1.05);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-        }
-
-        .section {
-            padding: 4rem 0;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .section-title {
-            text-align: center;
-            margin-bottom: 2.5rem;
-            position: relative;
-            font-size: 2.2rem;
-            color: var(--dark-gray);
-        }
-
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 5px;
-            background: linear-gradient(to right, var(--primary-blue), var(--primary-purple));
-            border-radius: 3px;
-        }
-
-        /* Water Drop Element */
-        .water-drop {
-            position: absolute;
-            background: rgba(52, 152, 219, 0.2);
-            border-radius: 50%;
-            animation: drip 8s infinite ease-in-out;
-            z-index: 0;
-        }
-
-        @keyframes drip {
-            0% { transform: translateY(-100px) scale(0.8); opacity: 0; }
-            50% { opacity: 0.6; }
-            100% { transform: translateY(500px) scale(1.2); opacity: 0; }
-        }
-
-        /* Colorful Curves */
-        .colorful-curve {
-            position: absolute;
-            width: 250px;
-            height: 250px;
-            border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
-            opacity: 0.15;
-            z-index: 0;
-            animation: morphing 15s infinite linear;
-        }
-
-        @keyframes morphing {
-            0% { border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%; transform: rotate(0deg); }
-            25% { border-radius: 70% 30% 50% 50% / 30% 40% 70% 70%; }
-            50% { border-radius: 50% 60% 30% 70% / 60% 30% 70% 40%; }
-            75% { border-radius: 30% 70% 70% 30% / 40% 50% 50% 70%; }
-            100% { border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%; transform: rotate(360deg); }
-        }
-
-        /* Floating Shapes */
-        .floating-shape {
-            position: absolute;
-            opacity: 0.15;
-            z-index: 0;
-            animation: float-shapes 15s infinite ease-in-out;
-        }
-
-        @keyframes float-shapes {
-            0% { transform: translateY(0) rotate(0deg); }
-            50% { transform: translateY(-20px) rotate(10deg); }
-            100% { transform: translateY(0) rotate(0deg); }
-        }
-
-        .shape-circle {
-            border-radius: 50%;
-            background: linear-gradient(135deg, var(--primary-blue), var(--primary-purple));
-        }
-
-        .shape-triangle {
-            width: 0;
-            height: 0;
-            border-left: 50px solid transparent;
-            border-right: 50px solid transparent;
-            border-bottom: 87px solid var(--primary-yellow);
-            background: transparent !important;
-        }
-
-        .shape-square {
-            border-radius: 15px;
-            background: linear-gradient(135deg, var(--primary-green), var(--primary-blue));
-        }
-
-        .shape-star {
-            background: var(--primary-red);
-            clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
-        }
-
-        .shape-heart {
-            background: var(--primary-red);
-            clip-path: path("M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z");
-        }
-
-        /* Bouncing Crayons */
-        .crayon {
-            position: absolute;
-            height: 60px;
-            width: 15px;
-            border-radius: 5px 5px 10px 10px;
-            z-index: 0;
-            animation: bounce 8s infinite ease-in-out;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-
-        @keyframes bounce {
-            0%, 100% { transform: translateY(0) rotate(0deg); }
-            25% { transform: translateY(-30px) rotate(5deg); }
-            50% { transform: translateY(0) rotate(0deg); }
-            75% { transform: translateY(-15px) rotate(-5deg); }
-        }
-
-        /* Floating Bubbles */
-        .bubble {
-            position: absolute;
-            background: rgba(255, 255, 255, 0.7);
-            border-radius: 50%;
-            z-index: 0;
-            animation: float-bubbles 12s infinite ease-in-out;
-            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
-        }
-
-        @keyframes float-bubbles {
-            0% { transform: translateY(0) scale(1); opacity: 0.7; }
-            50% { transform: translateY(-40px) scale(1.1); opacity: 0.9; }
-            100% { transform: translateY(0) scale(1); opacity: 0.7; }
-        }
-
-        /* Mobile-friendly animations */
-        .mobile-animation {
-            display: none;
-        }
-
-        /* Floating Elements */
-        .floating {
-            animation: floating 6s infinite ease-in-out;
-        }
-
-        @keyframes floating {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-15px); }
-            100% { transform: translateY(0px); }
-        }
-
-        /* Gallery Styles */
-        .gallery {
-            background-color: var(--light-gray);
-            position: relative;
-        }
-
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 1.5rem;
-            padding: 0 10px;
-        }
-
-        .gallery-item {
-            position: relative;
-            border-radius: var(--border-radius);
-            overflow: hidden;
-            box-shadow: var(--box-shadow);
-            height: 250px;
-            cursor: pointer;
-            transition: var(--transition);
-            transform: scale(0.95);
-        }
-
-        .gallery-item:hover {
-            transform: scale(1);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-        }
-
-        .gallery-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: var(--transition);
-        }
-
-        .gallery-item:hover img {
-            transform: scale(1.1);
-        }
-
-        .gallery-caption {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
-            color: var(--white);
-            padding: 1rem;
-            transform: translateY(100%);
-            transition: var(--transition);
-        }
-
-        .gallery-item:hover .gallery-caption {
-            transform: translateY(0);
-        }
-
-        .image-placeholder {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100%;
-            color: white;
-            font-size: 1.2rem;
-            text-align: center;
-            padding: 20px;
-            background: linear-gradient(45deg, var(--primary-blue), var(--primary-purple));
-        }
-
-        /* Gallery Tabs */
-        .gallery-tabs {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 2rem;
-            gap: 10px;
-            padding: 0 10px;
-        }
-
-        .gallery-tab {
-            padding: 12px 24px;
-            background: var(--white);
-            border-radius: 50px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: var(--transition);
-            box-shadow: var(--box-shadow);
-        }
-
-        .gallery-tab.active {
-            background: linear-gradient(135deg, var(--primary-blue), var(--primary-purple));
-            color: var(--white);
-        }
-
-        .gallery-tab:hover:not(.active) {
-            transform: translateY(-3px);
-            background: var(--light-gray);
-        }
-
-        .gallery-page {
-            display: none;
-        }
-
-        .gallery-page.active {
-            display: block;
-        }
-
-        /* Header Styles */
-        header {
-            background-color: rgba(255, 255, 255, 0.95);
-            color: var(--dark-gray);
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-            transition: var(--transition);
-            height: var(--header-height);
-        }
-
-        .header-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            height: 100%;
-            padding: 0 15px;
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .logo-img {
-            height: 50px;
-            width: 50px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-            background: linear-gradient(135deg, var(--primary-blue), var(--primary-purple));
-            padding: 5px;
-            animation: pulse 2s infinite;
-        }
-
-        @keyframes pulse {
-            0% { box-shadow: 0 0 0 0 rgba(52, 152, 219, 0.4); }
-            70% { box-shadow: 0 0 0 15px rgba(52, 152, 219, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(52, 152, 219, 0); }
-        }
-
-        .logo-img img {
-            height: 100%;
-            width: auto;
-            border-radius: 50%;
-        }
-
-        .logo-text {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .logo-title {
-            font-size: 1.1rem;
-            font-weight: 700;
-            line-height: 1.2;
-            background: linear-gradient(to right, var(--primary-blue), var(--primary-purple));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .logo-subtitle {
-            font-size: 0.7rem;
-            color: var(--primary-blue);
-        }
-
-        /* Navigation */
-        .nav-list {
-            display: flex;
-            list-style: none;
-        }
-
-        .nav-item {
-            margin-left: 1.8rem;
-            position: relative;
-        }
-
-        .nav-link {
-            color: var(--dark-gray);
-            font-weight: 600;
-            transition: var(--transition);
-            position: relative;
-            padding: 8px 0;
-            font-size: 1rem;
-        }
-
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 0;
-            height: 3px;
-            background: linear-gradient(to right, var(--primary-blue), var(--primary-purple));
-            transition: var(--transition);
-            border-radius: 3px;
-        }
-
-        .nav-link:hover {
-            color: var(--primary-blue);
-        }
-
-        .nav-link:hover::after {
-            width: 100%;
-        }
-
-        /* Fixed Hamburger Menu */
-        .burger {
-            display: none;
-            cursor: pointer;
-            flex-direction: column;
-            justify-content: space-around;
-            width: 30px;
-            height: 25px;
-            z-index: 1001;
-        }
-
-        .burger div {
-            width: 100%;
-            height: 3px;
-            background: linear-gradient(to right, var(--primary-blue), var(--primary-purple));
-            transition: var(--transition);
-            border-radius: 3px;
-            transform-origin: left center;
-        }
-
-        .burger.toggle .line1 {
-            transform: rotate(45deg) translate(1px, -2px);
-        }
-
-        .burger.toggle .line2 {
-            opacity: 0;
-            transform: translateX(-20px);
-        }
-
-        .burger.toggle .line3 {
-            transform: rotate(-45deg) translate(1px, 2px);
-        }
-
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('media/background.jpg') center/cover no-repeat;
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: var(--white);
-            margin-top: var(--header-height);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 100px;
-            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none"><path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" fill="%23ffffff"></path></svg>');
-            background-size: cover;
-            background-position: center;
-        }
-
-        .hero-content {
-            max-width: 900px;
-            padding: 2rem;
-            z-index: 1;
-        }
-
-        .hero-title {
-            font-size: 2.8rem;
-            margin-bottom: 1.5rem;
-            color: var(--white);
-            animation: fadeInDown 1s ease;
-            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
-        }
-
-        .hero-subtitle {
-            font-size: 1.5rem;
-            margin-bottom: 2rem;
-            color: var(--primary-yellow);
-            animation: fadeInUp 1s ease;
-            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
-        }
-
-        .hero-text {
-            margin-bottom: 2.5rem;
-            font-size: 1.1rem;
-            animation: fadeIn 1.5s ease;
-        }
-
-        /* About Section */
-        .about {
-            background-color: var(--light-gray);
-            position: relative;
-        }
-
-        .about-content {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            gap: 2rem;
-        }
-
-        .about-image {
-            flex: 1;
-            min-width: 300px;
-            border-radius: var(--border-radius);
-            overflow: hidden;
-            box-shadow: var(--box-shadow);
-            transform: perspective(1000px) rotateY(-10deg);
-            transition: var(--transition);
-        }
-
-        .about-image:hover {
-            transform: perspective(1000px) rotateY(0deg);
-        }
-
-        .about-text {
-            flex: 1;
-            min-width: 300px;
-            z-index: 1;
-        }
-
-        .features {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-            margin-top: 2rem;
-        }
-
-        .feature {
-            background-color: var(--white);
-            padding: 1.5rem;
-            border-radius: var(--border-radius);
-            text-align: center;
-            box-shadow: var(--box-shadow);
-            transition: var(--transition);
-            position: relative;
-            overflow: hidden;
-            z-index: 1;
-        }
-
-        .feature::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 5px;
-            height: 0;
-            background: linear-gradient(to bottom, var(--primary-blue), var(--primary-purple));
-            transition: var(--transition);
-            z-index: -1;
-        }
-
-        .feature:hover::before {
-            height: 100%;
-        }
-
-        .feature:hover {
-            transform: translateY(-8px) scale(1.03);
-            color: var(--white);
-        }
-
-        .feature-icon {
-            font-size: 2.8rem;
-            margin-bottom: 1.2rem;
-            background: linear-gradient(to right, var(--primary-blue), var(--primary-purple));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            transition: var(--transition);
-        }
-
-        .feature:hover .feature-icon {
-            color: var(--white);
-            -webkit-text-fill-color: var(--white);
-        }
-
-        /* Admission Section */
-        .admission {
-            background-color: var(--light-gray);
-            position: relative;
-        }
-
-        .admission-content {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 2rem;
-        }
-
-        .admission-image {
-            flex: 1;
-            min-width: 300px;
-            border-radius: var(--border-radius);
-            overflow: hidden;
-            box-shadow: var(--box-shadow);
-            transform: perspective(1000px) rotateY(10deg);
-            transition: var(--transition);
-        }
-
-        .admission-image:hover {
-            transform: perspective(1000px) rotateY(0deg);
-        }
-
-        .admission-info {
-            flex: 1;
-            min-width: 300px;
-            z-index: 1;
-        }
-
-        .process-steps {
-            margin-top: 2rem;
-            position: relative;
-            z-index: 2;
-        }
-
-        .step {
-            display: flex;
-            align-items: flex-start;
-            margin-bottom: 1.5rem;
-            padding: 1rem;
-            background: var(--white);
-            border-radius: var(--border-radius);
-            box-shadow: var(--box-shadow);
-            transition: var(--transition);
-        }
-
-        .step:hover {
-            transform: translateX(8px);
-        }
-
-        .step-number {
-            background: linear-gradient(135deg, var(--primary-blue), var(--primary-purple));
-            color: var(--white);
-            width: 45px;
-            height: 45px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 700;
-            margin-right: 1.2rem;
-            flex-shrink: 0;
-            font-size: 1.2rem;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        }
-
-        /* Contact Section */
-        .contact-content {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 2rem;
-        }
-
-        .contact-info {
-            flex: 1;
-            min-width: 300px;
-            z-index: 1;
-        }
-
-        .contact-details {
-            margin-bottom: 2rem;
-        }
-
-        .contact-item {
-            display: flex;
-            align-items: center;
-            margin-bottom: 1rem;
-            padding: 1rem;
-            background: var(--white);
-            border-radius: var(--border-radius);
-            box-shadow: var(--box-shadow);
-            transition: var(--transition);
-        }
-
-        .contact-item:hover {
-            transform: translateX(8px);
-        }
-
-        .contact-icon {
-            font-size: 1.5rem;
-            background: linear-gradient(to right, var(--primary-blue), var(--primary-purple));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            margin-right: 1.2rem;
-            width: 35px;
-            text-align: center;
-        }
-
-        .map {
-            flex: 1;
-            min-width: 300px;
-            height: 300px;
-            border-radius: var(--border-radius);
-            overflow: hidden;
-            box-shadow: var(--box-shadow);
-            transition: var(--transition);
-        }
-
-        .map:hover {
-            transform: scale(1.02);
-        }
-
-        .map iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
-
-        /* Footer */
-        footer {
-            background: linear-gradient(to right, var(--primary-blue), var(--primary-purple));
-            color: var(--white);
-            padding: 3rem 0 1rem;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .footer-content {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 2rem;
-            margin-bottom: 2rem;
-        }
-
-        .footer-column {
-            flex: 1;
-            min-width: 200px;
-            z-index: 1;
-        }
-
-        .footer-title {
-            color: var(--white);
-            margin-bottom: 1.5rem;
-            position: relative;
-            padding-bottom: 8px;
-            font-size: 1.5rem;
-            text-shadow: 0 0 10px rgba(255, 255, 255, 0.3), 0 0 20px rgba(255, 255, 255, 0.2);
-            animation: footer-glow 2s ease-in-out infinite alternate;
-        }
-
-        @keyframes footer-glow {
-            from { text-shadow: 0 0 5px rgba(255, 255, 255, 0.3), 0 0 10px rgba(255, 255, 255, 0.2); }
-            to { text-shadow: 0 0 15px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.3), 0 0 25px rgba(255, 255, 255, 0.2); }
-        }
-
-        .footer-title::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 40px;
-            height: 3px;
-            background-color: var(--primary-yellow);
-            border-radius: 3px;
-        }
-
-        .social-links {
-            display: flex;
-            gap: 0.8rem;
-            margin-top: 1.2rem;
-        }
-
-        .social-link {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 50%;
-            transition: var(--transition);
-        }
-
-        .social-link:hover {
-            background: var(--primary-yellow);
-            transform: translateY(-5px) rotate(10deg);
-        }
-
-        .copyright {
-            text-align: center;
-            padding-top: 1.5rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            z-index: 1;
-            position: relative;
-        }
-
-        .copyright p {
-            margin: 0;
-            font-size: 1rem;
-            text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
-            animation: copyright-glow 3s ease-in-out infinite alternate;
-        }
-
-        @keyframes copyright-glow {
-            from { text-shadow: 0 0 5px rgba(255, 255, 255, 0.3); }
-            to { text-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 0 0 15px rgba(255, 255, 255, 0.4); }
-        }
-
-        /* Anthem Modal */
-        .modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.8);
-            z-index: 1100;
-            overflow-y: auto;
-            padding: 1rem;
-        }
-
-        .modal-content {
-            background: var(--white);
-            margin: 2rem auto;
-            max-width: 800px;
-            border-radius: var(--border-radius);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-            animation: modalFadeIn 0.4s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .modal-header {
-            padding: 1.5rem;
-            background: linear-gradient(to right, var(--primary-blue), var(--primary-purple));
-            color: var(--white);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .close-modal {
-            font-size: 1.8rem;
-            cursor: pointer;
-            transition: var(--transition);
-            background: none;
-            border: none;
-            color: var(--white);
-        }
-
-        .close-modal:hover {
-            transform: rotate(90deg) scale(1.2);
-            color: var(--primary-yellow);
-        }
-
-        .modal-body {
-            padding: 2rem;
-        }
-
-        .anthem-section {
-            margin-bottom: 2rem;
-            padding: 1.5rem;
-            background: var(--light-gray);
-            border-radius: var(--border-radius);
-            transition: var(--transition);
-            box-shadow: var(--box-shadow);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .anthem-section:hover {
-            transform: translateX(8px);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-        }
-
-        .anthem-title {
-            color: var(--primary-blue);
-            margin-bottom: 1rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            text-shadow: 0 0 10px rgba(52, 152, 219, 0.3), 0 0 20px rgba(52, 152, 219, 0.2);
-            animation: glow 2s ease-in-out infinite alternate;
-        }
-
-        @keyframes glow {
-            from { text-shadow: 0 0 5px rgba(52, 152, 219, 0.3), 0 0 10px rgba(52, 152, 219, 0.2); }
-            to { text-shadow: 0 0 15px rgba(52, 152, 219, 0.5), 0 0 20px rgba(52, 152, 219, 0.3), 0 0 25px rgba(52, 152, 219, 0.2); }
-        }
-
-        .anthem-title i {
-            margin-right: 10px;
-            background: linear-gradient(to right, var(--primary-blue), var(--primary-purple));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .anthem-text {
-            padding: 1.5rem;
-            border-radius: var(--border-radius);
-            line-height: 1.8;
-            background: var(--white);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            text-align: center;
-            font-size: 1.1rem;
-            border-left: 4px solid var(--primary-blue);
-            border-right: 4px solid var(--primary-purple);
-            position: relative;
-        }
-
-        .anthem-text::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            border-radius: var(--border-radius);
-            box-shadow: 0 0 15px rgba(52, 152, 219, 0.3);
-            opacity: 0;
-            transition: var(--transition);
-            z-index: -1;
-        }
-
-        .anthem-text:hover::before {
-            opacity: 1;
-        }
-
-        .play-btn {
-            display: inline-flex;
-            align-items: center;
-            margin-top: 1rem;
-            padding: 0.7rem 1.2rem;
-            background: linear-gradient(to right, var(--primary-blue), var(--primary-purple));
-            color: var(--white);
-            border-radius: 50px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: var(--transition);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        }
-
-        .play-btn:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-        }
-
-        .play-btn i {
-            margin-right: 8px;
-        }
-
-        /* Animations */
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        @keyframes fadeInDown {
-            from { opacity: 0; transform: translateY(-30px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        @keyframes modalFadeIn {
-            from { opacity: 0; transform: translateY(-70px) scale(0.9); }
-            to { opacity: 1; transform: translateY(0) scale(1); }
-        }
-
-        /* Responsive Styles */
-        @media screen and (max-width: 1024px) {
-            .hero-title {
-                font-size: 2.5rem;
-            }
-            
-            .hero-subtitle {
-                font-size: 1.3rem;
-            }
-            
-            .section-title {
-                font-size: 2rem;
-            }
-        }
-
-        @media screen and (max-width: 768px) {
-            :root {
-                --header-height: 70px;
-            }
-            
-            html {
-                font-size: 15px;
-            }
-            
-            .burger {
-                display: flex;
-            }
-
-            .nav-list {
-                position: fixed;
-                top: var(--header-height);
-                right: -100%;
-                height: calc(100vh - var(--header-height));
-                width: 70%;
-                flex-direction: column;
-                background: linear-gradient(to bottom, var(--primary-blue), var(--primary-purple));
-                padding: 2rem;
-                transition: var(--transition);
-                box-shadow: -5px 0 25px rgba(0, 0, 0, 0.2);
-            }
-
-            .nav-list.active {
-                right: 0;
-            }
-
-            .nav-item {
-                margin: 1.5rem 0;
-            }
-
-            .nav-link {
-                color: var(--white);
-                font-size: 1.1rem;
-            }
-
-            .hero-title {
-                font-size: 2.2rem;
-            }
-
-            .hero-subtitle {
-                font-size: 1.2rem;
-            }
-            
-            .hero {
-                margin-top: var(--header-height);
-            }
-
-            .burger.toggle .line1 {
-                transform: rotate(-45deg) translate(-7px, 8px);
-            }
-
-            .burger.toggle .line2 {
-                opacity: 0;
-            }
-
-            .burger.toggle .line3 {
-                transform: rotate(45deg) translate(-7px, -8px);
-            }
-            
-            .about-content, .admission-content, .contact-content {
-                flex-direction: column;
-            }
-            
-            .about-image, .admission-image {
-                transform: none;
-                margin-bottom: 1.5rem;
-            }
-            
-            .about-image:hover, .admission-image:hover {
-                transform: none;
-            }
-            
-            .feature:hover, .step:hover, .contact-item:hover, .anthem-section:hover {
-                transform: none;
-            }
-            
-            .gallery-grid {
-                grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-            }
-            
-            .water-drop, .colorful-curve, .floating-shape, .crayon {
-                display: none;
-            }
-            
-            .mobile-animation {
-                display: block;
-            }
-            
-            .bubble {
-                display: block;
-                width: 20px;
-                height: 20px;
-                opacity: 0.3;
-            }
-
-            .gallery-tabs {
-                flex-wrap: wrap;
-            }
-        }
-
-        @media screen and (max-width: 480px) {
-            html {
-                font-size: 14px;
-            }
-            
-            .hero-title {
-                font-size: 1.8rem;
-            }
-
-            .hero-subtitle {
-                font-size: 1.1rem;
-            }
-            
-            .section {
-                padding: 3rem 0;
-            }
-
-            .section-title {
-                font-size: 1.8rem;
-            }
-            
-            .logo-title {
-                font-size: 0.9rem;
-            }
-            
-            .logo-subtitle {
-                font-size: 0.6rem;
-            }
-            
-            .btn {
-                padding: 12px 24px;
-                font-size: 0.9rem;
-            }
-            
-            .features {
-                grid-template-columns: 1fr;
-            }
-            
-            .gallery-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .gallery-item {
-                height: 220px;
-            }
-            
-            .nav-list {
-                width: 85%;
-            }
-            
-            .modal-body {
-                padding: 1.5rem;
-            }
-            
-            .modal-header {
-                padding: 1.2rem;
-            }
-            
-            .footer-content {
-                flex-direction: column;
-                gap: 1.5rem;
-            }
-            
-            .bubble {
-                width: 15px;
-                height: 15px;
-                opacity: 0.2;
-            }
-        }
-    </style>
+  <!-- ========= SEO & META ========= -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!-- Google Site Name Override -->
+  <meta name="application-name" content="Proper Child International School">
+  <meta name="apple-mobile-web-app-title" content="Proper Child International School">
+  <meta name="theme-color" content="#0D3D2B">
+
+  <title>Proper Child International School | Quality Education in Igbo Etche, Rivers State</title>
+  <meta name="description" content="Proper Child International School — established 2011 in Igbo Etche, Rivers State. Nursery, Primary & Secondary education. ICT lab, science labs, experienced teachers. Enroll today.">
+  <meta name="keywords" content="Proper Child International School, schools in Igbo Etche, Rivers State schools, best school Etche, private school Rivers State, nursery primary secondary school Nigeria, quality education Rivers State, school admission Nigeria 2025, Umuotube Chokota school, PCIS, properchildintlschool">
+  <meta name="author" content="Proper Child International School">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://properchildintlschool.dedyn.io/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Proper Child International School | Rivers State, Nigeria">
+  <meta property="og:description" content="Shaping future leaders since 2011. Quality nursery, primary and secondary education in Igbo Etche, Rivers State.">
+  <meta property="og:image" content="https://properchildintlschool.dedyn.io/media/background.jpg">
+  <meta property="og:url" content="https://properchildintlschool.dedyn.io/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Proper Child International School">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Proper Child International School">
+  <meta name="twitter:description" content="Bringing out the best in our children since 2011. Igbo Etche, Rivers State.">
+  <meta name="twitter:image" content="https://properchildintlschool.dedyn.io/media/background.jpg">
+
+  <!-- WebSite schema: the single most important tag for Google's site name label -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Proper Child International School",
+    "alternateName": ["PCIS", "Proper Child Intl School"],
+    "url": "https://properchildintlschool.dedyn.io"
+  }
+  </script>
+
+  <!-- Schema.org Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "name": "Proper Child International School",
+    "alternateName": "PCIS",
+    "url": "https://properchildintlschool.dedyn.io",
+    "logo": "https://properchildintlschool.dedyn.io/media/logo.png",
+    "image": "https://properchildintlschool.dedyn.io/media/background.jpg",
+    "description": "Proper Child International School is a leading private school in Igbo Etche, Rivers State Nigeria, offering nursery, primary and secondary education since 2011.",
+    "foundingDate": "2011",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Proper Child Avenue, off Palm View Road, Umuotube Chokota",
+      "addressLocality": "Igbo Etche",
+      "addressRegion": "Rivers State",
+      "addressCountry": "NG"
+    },
+    "telephone": ["08039384269", "08038700545"],
+    "email": "properchildintlschool@gmail.com",
+    "sameAs": [
+      "https://facebook.com",
+      "https://instagram.com"
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Educational Programs",
+      "itemListElement": [
+        { "@type": "Offer", "itemOffered": { "@type": "Course", "name": "Nursery Education" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Course", "name": "Primary Education" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Course", "name": "Secondary Education (JSS & SSS)" } }
+      ]
+    }
+  }
+  </script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    /* ========== TOKENS ========== */
+    :root {
+      --green:       #0D3D2B;
+      --green-mid:   #1A5C3F;
+      --green-light: #2E7D55;
+      --gold:        #C9933A;
+      --gold-light:  #E8B96A;
+      --cream:       #FAF7F0;
+      --cream-dark:  #F0EBE0;
+      --crimson:     #8B1A1A;
+      --charcoal:    #1C1C1C;
+      --mid-grey:    #6B6B6B;
+      --white:       #FFFFFF;
+      --nav-h:       80px;
+      --ease:        cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    /* ========== RESET ========== */
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--cream);
+      color: var(--charcoal);
+      overflow-x: hidden;
+    }
+    a { text-decoration: none; color: inherit; }
+    img { display: block; max-width: 100%; height: auto; }
+
+    /* ========== UTILITY ========== */
+    .container { width: 92%; max-width: 1180px; margin: 0 auto; }
+
+    .tag {
+      display: inline-block;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.85rem;
+    }
+
+    .heading-xl {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.6rem, 5.5vw, 5rem);
+      font-weight: 700;
+      line-height: 1.05;
+      color: var(--white);
+    }
+
+    .heading-lg {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2rem, 4vw, 3.4rem);
+      font-weight: 700;
+      line-height: 1.1;
+      color: var(--green);
+    }
+
+    .heading-md {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.4rem, 2.5vw, 2rem);
+      font-weight: 600;
+      color: var(--green);
+    }
+
+    .gold-rule {
+      display: block;
+      width: 56px;
+      height: 3px;
+      background: var(--gold);
+      margin: 1.2rem 0 1.8rem;
+    }
+
+    .gold-rule.center { margin-left: auto; margin-right: auto; }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--gold);
+      color: var(--white);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.88rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 0.9rem 2.2rem;
+      border: none;
+      cursor: pointer;
+      transition: background 0.3s var(--ease), transform 0.3s var(--ease);
+    }
+
+    .btn-primary:hover {
+      background: var(--gold-light);
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: transparent;
+      color: var(--white);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.88rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 0.88rem 2.2rem;
+      border: 1.5px solid rgba(255,255,255,0.55);
+      cursor: pointer;
+      transition: border-color 0.3s, background 0.3s, transform 0.3s var(--ease);
+    }
+
+    .btn-outline:hover {
+      border-color: var(--gold);
+      background: rgba(201,147,58,0.12);
+      transform: translateY(-2px);
+    }
+
+    /* ========== NAV ========== */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 900;
+      height: var(--nav-h);
+      background: rgba(13, 61, 43, 0.96);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(201,147,58,0.25);
+      transition: background 0.4s;
+    }
+
+    nav.scrolled {
+      background: rgba(13, 61, 43, 0.99);
+      box-shadow: 0 4px 24px rgba(0,0,0,0.25);
+    }
+
+    .nav-inner {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 0.9rem;
+    }
+
+    .nav-brand img {
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid var(--gold);
+    }
+
+    .brand-text { line-height: 1.2; }
+
+    .brand-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--white);
+      letter-spacing: 0.03em;
+    }
+
+    .brand-motto {
+      font-size: 0.65rem;
+      color: var(--gold-light);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 2.2rem;
+      align-items: center;
+    }
+
+    .nav-links a {
+      font-size: 0.82rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.8);
+      position: relative;
+      padding-bottom: 4px;
+      transition: color 0.3s;
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0;
+      width: 0; height: 1.5px;
+      background: var(--gold);
+      transition: width 0.3s var(--ease);
+    }
+
+    .nav-links a:hover { color: var(--white); }
+    .nav-links a:hover::after { width: 100%; }
+
+    .nav-links .nav-cta {
+      background: var(--gold);
+      color: var(--white);
+      padding: 0.52rem 1.4rem;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      transition: background 0.3s, transform 0.3s;
+    }
+
+    .nav-links .nav-cta:hover { background: var(--gold-light); transform: translateY(-1px); }
+    .nav-links .nav-cta::after { display: none; }
+
+    .nav-burger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 4px;
+    }
+
+    .nav-burger span {
+      display: block;
+      width: 24px; height: 2px;
+      background: var(--white);
+      transition: all 0.3s var(--ease);
+      transform-origin: left;
+    }
+
+    .nav-burger.open span:nth-child(1) { transform: rotate(45deg) translate(0, -1px); }
+    .nav-burger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+    .nav-burger.open span:nth-child(3) { transform: rotate(-45deg) translate(0, 1px); }
+
+    /* ========== HERO ========== */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      padding-top: var(--nav-h);
+      overflow: hidden;
+    }
+
+    .hero-left {
+      background: var(--green);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 5rem 4rem 5rem 6%;
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-left::after {
+      content: '';
+      position: absolute;
+      top: 0; right: -80px;
+      width: 160px; height: 100%;
+      background: var(--green);
+      clip-path: polygon(0 0, 0 100%, 100% 100%);
+      z-index: 3;
+    }
+
+    .hero-right {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-right img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      transform: scale(1.04);
+      transition: transform 8s var(--ease);
+    }
+
+    .hero-right img.loaded { transform: scale(1); }
+
+    .hero-right::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to right, rgba(13,61,43,0.5) 0%, transparent 60%);
+    }
+
+    .hero-year {
+      font-size: 0.72rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold-light);
+      margin-bottom: 1.2rem;
+    }
+
+    .hero-title { position: relative; z-index: 4; }
+
+    .hero-subtitle {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: clamp(1.1rem, 2vw, 1.4rem);
+      color: rgba(255,255,255,0.75);
+      margin: 1.4rem 0 2.4rem;
+      line-height: 1.6;
+      position: relative; z-index: 4;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      position: relative; z-index: 4;
+    }
+
+    .hero-stat-strip {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      background: rgba(0,0,0,0.65);
+      backdrop-filter: blur(8px);
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      border-top: 1px solid rgba(201,147,58,0.3);
+      z-index: 10;
+    }
+
+    .hero-stat {
+      padding: 1.3rem 1.5rem;
+      border-right: 1px solid rgba(255,255,255,0.1);
+      text-align: center;
+    }
+
+    .hero-stat:last-child { border-right: none; }
+
+    .stat-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--gold);
+      line-height: 1;
+    }
+
+    .stat-label {
+      font-size: 0.72rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.65);
+      margin-top: 0.3rem;
+    }
+
+    /* ========== SECTION BASE ========== */
+    .section { padding: 6rem 0; }
+    .section.cream { background: var(--cream); }
+    .section.white { background: var(--white); }
+    .section.dark { background: var(--green); }
+
+    .section-header {
+      margin-bottom: 3.5rem;
+    }
+
+    .section-header.center { text-align: center; }
+    .section-header.center .gold-rule { margin: 1rem auto 1.8rem; }
+
+    /* ========== ABOUT ========== */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: center;
+    }
+
+    .about-img-wrap {
+      position: relative;
+    }
+
+    .about-img-wrap img {
+      width: 100%;
+      height: 520px;
+      object-fit: cover;
+    }
+
+    .about-img-wrap::before {
+      content: '';
+      position: absolute;
+      top: -16px; left: -16px;
+      right: 16px; bottom: 16px;
+      border: 2px solid var(--gold);
+      z-index: -1;
+    }
+
+    .about-badge {
+      position: absolute;
+      bottom: -24px; right: -24px;
+      width: 120px; height: 120px;
+      background: var(--gold);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: var(--white);
+    }
+
+    .badge-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.6rem;
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    .badge-text {
+      font-size: 0.7rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      opacity: 0.9;
+      text-align: center;
+      margin-top: 0.2rem;
+    }
+
+    .about-body p {
+      font-size: 1rem;
+      line-height: 1.8;
+      color: var(--mid-grey);
+      margin-bottom: 1.2rem;
+    }
+
+    .about-pillars {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .pillar {
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+      padding: 1.2rem;
+      background: var(--cream-dark);
+      border-left: 3px solid var(--gold);
+      transition: background 0.3s;
+    }
+
+    .pillar:hover { background: var(--cream); }
+
+    .pillar-icon {
+      width: 38px; height: 38px;
+      background: var(--green);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--gold);
+      font-size: 0.9rem;
+      flex-shrink: 0;
+    }
+
+    .pillar h4 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--green);
+      margin-bottom: 0.2rem;
+    }
+
+    .pillar p { font-size: 0.82rem; color: var(--mid-grey); margin: 0; line-height: 1.5; }
+
+    /* ========== QUOTE BAND ========== */
+    .quote-band {
+      background: var(--green);
+      padding: 5rem 0;
+      text-align: center;
+    }
+
+    .quote-mark {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 6rem;
+      color: var(--gold);
+      line-height: 0.6;
+      display: block;
+      margin-bottom: 1rem;
+    }
+
+    .quote-text {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: clamp(1.4rem, 3vw, 2.2rem);
+      color: var(--white);
+      max-width: 780px;
+      margin: 0 auto 1.5rem;
+      line-height: 1.55;
+    }
+
+    .quote-attr {
+      font-size: 0.8rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--gold-light);
+    }
+
+    /* ========== PROGRAMS ========== */
+    .programs-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0;
+    }
+
+    .program-card {
+      position: relative;
+      overflow: hidden;
+      min-height: 420px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      cursor: pointer;
+    }
+
+    .program-bg {
+      position: absolute;
+      inset: 0;
+      transition: transform 0.6s var(--ease);
+    }
+
+    .program-card:hover .program-bg { transform: scale(1.06); }
+
+    .program-bg-1 { background: linear-gradient(135deg, #1A5C3F 0%, #0D3D2B 100%); }
+    .program-bg-2 { background: linear-gradient(135deg, #8B1A1A 0%, #5C1111 100%); }
+    .program-bg-3 { background: linear-gradient(135deg, #1A3A5C 0%, #0D2040 100%); }
+
+    .program-inner {
+      position: relative;
+      z-index: 2;
+      padding: 2.4rem;
+      background: linear-gradient(to top, rgba(0,0,0,0.82) 0%, transparent 100%);
+    }
+
+    .program-level {
+      font-size: 0.72rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.5rem;
+    }
+
+    .program-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.2;
+      margin-bottom: 0.8rem;
+    }
+
+    .program-desc {
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.72);
+      line-height: 1.6;
+      margin-bottom: 1.2rem;
+    }
+
+    .program-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--gold-light);
+      border-bottom: 1px solid rgba(201,147,58,0.35);
+      padding-bottom: 2px;
+      transition: color 0.3s, border-color 0.3s;
+    }
+
+    .program-link:hover { color: var(--white); border-color: var(--white); }
+
+    .program-icon {
+      position: absolute;
+      top: 2rem; right: 2rem;
+      width: 52px; height: 52px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--gold-light);
+      font-size: 1.3rem;
+    }
+
+    /* ========== WHY US ========== */
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+      background: var(--cream-dark);
+    }
+
+    .why-item {
+      background: var(--white);
+      padding: 2.8rem 2.2rem;
+      text-align: center;
+      transition: background 0.3s, transform 0.3s var(--ease);
+    }
+
+    .why-item:hover {
+      background: var(--green);
+      transform: translateY(-4px);
+    }
+
+    .why-icon {
+      width: 60px; height: 60px;
+      background: var(--cream-dark);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.4rem;
+      font-size: 1.4rem;
+      color: var(--green);
+      transition: background 0.3s, color 0.3s;
+    }
+
+    .why-item:hover .why-icon {
+      background: rgba(255,255,255,0.12);
+      color: var(--gold);
+    }
+
+    .why-item h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--green);
+      margin-bottom: 0.6rem;
+      transition: color 0.3s;
+    }
+
+    .why-item:hover h3 { color: var(--white); }
+
+    .why-item p {
+      font-size: 0.88rem;
+      color: var(--mid-grey);
+      line-height: 1.65;
+      transition: color 0.3s;
+    }
+
+    .why-item:hover p { color: rgba(255,255,255,0.7); }
+
+    /* ========== ADMISSION ========== */
+    .admission-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: start;
+    }
+
+    .admission-img {
+      width: 100%;
+      height: 560px;
+      object-fit: cover;
+    }
+
+    .steps { margin-top: 2rem; }
+
+    .step-item {
+      display: flex;
+      gap: 1.5rem;
+      align-items: flex-start;
+      padding: 1.5rem 0;
+      border-bottom: 1px solid var(--cream-dark);
+    }
+
+    .step-item:last-child { border-bottom: none; }
+
+    .step-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 3rem;
+      font-weight: 700;
+      color: var(--cream-dark);
+      line-height: 1;
+      flex-shrink: 0;
+      width: 48px;
+      text-align: center;
+      transition: color 0.3s;
+    }
+
+    .step-item:hover .step-num { color: var(--gold); }
+
+    .step-body h4 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--green);
+      margin-bottom: 0.35rem;
+    }
+
+    .step-body p { font-size: 0.9rem; color: var(--mid-grey); line-height: 1.6; }
+
+    .req-list {
+      margin-top: 1.5rem;
+      padding: 1.5rem;
+      background: var(--cream-dark);
+      border-left: 3px solid var(--gold);
+    }
+
+    .req-list h4 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--green);
+      margin-bottom: 0.8rem;
+    }
+
+    .req-list ul { list-style: none; }
+    .req-list li {
+      font-size: 0.88rem;
+      color: var(--mid-grey);
+      padding: 0.35rem 0;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .req-list li::before {
+      content: '';
+      display: inline-block;
+      width: 5px; height: 5px;
+      background: var(--gold);
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    /* ========== GALLERY PREVIEW ========== */
+    .gallery-preview-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: 240px 240px;
+      gap: 3px;
+    }
+
+    .gp-item {
+      overflow: hidden;
+      position: relative;
+      cursor: pointer;
+    }
+
+    .gp-item:nth-child(1) { grid-column: span 2; grid-row: span 2; }
+
+    .gp-item img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s var(--ease);
+    }
+
+    .gp-item:hover img { transform: scale(1.07); }
+
+    .gp-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(13,61,43,0);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.3s;
+    }
+
+    .gp-item:hover .gp-overlay { background: rgba(13,61,43,0.45); }
+
+    .gp-overlay i {
+      font-size: 1.8rem;
+      color: var(--white);
+      opacity: 0;
+      transform: scale(0.7);
+      transition: opacity 0.3s, transform 0.3s;
+    }
+
+    .gp-item:hover .gp-overlay i { opacity: 1; transform: scale(1); }
+
+    .gallery-cta {
+      text-align: center;
+      margin-top: 2.8rem;
+    }
+
+    .btn-green {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      background: var(--green);
+      color: var(--white);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.88rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 0.9rem 2.2rem;
+      border: none;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.3s var(--ease);
+    }
+
+    .btn-green:hover { background: var(--green-mid); transform: translateY(-2px); }
+
+    /* ========== CONTACT ========== */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: start;
+    }
+
+    .contact-card {
+      display: flex;
+      gap: 1.2rem;
+      align-items: flex-start;
+      padding: 1.5rem;
+      border: 1px solid var(--cream-dark);
+      margin-bottom: 1rem;
+      transition: border-color 0.3s, box-shadow 0.3s;
+    }
+
+    .contact-card:hover {
+      border-color: var(--gold);
+      box-shadow: 0 4px 20px rgba(201,147,58,0.1);
+    }
+
+    .contact-card-icon {
+      width: 44px; height: 44px;
+      background: var(--green);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--gold);
+      font-size: 1rem;
+      flex-shrink: 0;
+    }
+
+    .contact-card-body h4 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--green);
+      margin-bottom: 0.3rem;
+    }
+
+    .contact-card-body p, .contact-card-body a {
+      font-size: 0.9rem;
+      color: var(--mid-grey);
+      line-height: 1.6;
+    }
+
+    .social-row {
+      display: flex;
+      gap: 0.8rem;
+      margin-top: 1.8rem;
+    }
+
+    .social-btn {
+      width: 40px; height: 40px;
+      border: 1.5px solid var(--green);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--green);
+      font-size: 0.9rem;
+      transition: background 0.3s, color 0.3s, border-color 0.3s;
+    }
+
+    .social-btn:hover {
+      background: var(--green);
+      color: var(--gold);
+    }
+
+    .map-wrap {
+      height: 380px;
+      overflow: hidden;
+    }
+
+    .map-wrap iframe { width: 100%; height: 100%; border: none; }
+
+    /* ========== ANTHEM SECTION ========== */
+    .anthem-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+    }
+
+    .anthem-card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(201,147,58,0.25);
+      padding: 2rem;
+      transition: background 0.3s, border-color 0.3s;
+    }
+
+    .anthem-card:hover {
+      background: rgba(255,255,255,0.08);
+      border-color: var(--gold);
+    }
+
+    .anthem-card-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--gold);
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .anthem-card-title i { font-size: 1rem; }
+
+    .anthem-lines p {
+      font-size: 0.92rem;
+      color: rgba(255,255,255,0.75);
+      line-height: 2;
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+    }
+
+    .anthem-lines p:empty { display: block; height: 0.6rem; }
+
+    .play-row {
+      margin-top: 1.2rem;
+      display: flex;
+      gap: 0.8rem;
+    }
+
+    .play-btn-sm {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--gold);
+      border: 1px solid rgba(201,147,58,0.4);
+      padding: 0.5rem 1.1rem;
+      cursor: pointer;
+      transition: background 0.3s, color 0.3s;
+      background: none;
+    }
+
+    .play-btn-sm:hover { background: var(--gold); color: var(--white); }
+
+    /* ========== FOOTER ========== */
+    footer {
+      background: var(--charcoal);
+      color: var(--white);
+      padding: 4rem 0 2rem;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1.5fr;
+      gap: 3rem;
+      padding-bottom: 3rem;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      margin-bottom: 2rem;
+    }
+
+    .footer-brand-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 0.6rem;
+    }
+
+    .footer-tagline {
+      font-style: italic;
+      font-size: 0.88rem;
+      color: var(--gold-light);
+      margin-bottom: 1rem;
+    }
+
+    .footer-about {
+      font-size: 0.85rem;
+      line-height: 1.7;
+      color: rgba(255,255,255,0.5);
+      margin-bottom: 1.5rem;
+    }
+
+    .footer-heading {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1.2rem;
+    }
+
+    .footer-links { list-style: none; }
+    .footer-links li { margin-bottom: 0.6rem; }
+    .footer-links a {
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.5);
+      transition: color 0.3s;
+    }
+    .footer-links a:hover { color: var(--gold); }
+
+    .footer-contact-item {
+      display: flex;
+      gap: 0.8rem;
+      align-items: flex-start;
+      margin-bottom: 0.9rem;
+    }
+
+    .footer-contact-item i {
+      color: var(--gold);
+      font-size: 0.85rem;
+      margin-top: 0.2rem;
+      flex-shrink: 0;
+    }
+
+    .footer-contact-item span {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.5);
+      line-height: 1.5;
+    }
+
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.3);
+    }
+
+    .footer-bottom a { color: var(--gold); transition: opacity 0.3s; }
+    .footer-bottom a:hover { opacity: 0.8; }
+
+    /* ========== MOBILE NAV PANEL ========== */
+    .mobile-nav-panel {
+      position: fixed;
+      top: var(--nav-h); left: 0; right: 0; bottom: 0;
+      background: var(--green);
+      z-index: 800;
+      padding: 3rem 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      transform: translateX(100%);
+      transition: transform 0.4s var(--ease);
+    }
+
+    .mobile-nav-panel.open { transform: translateX(0); }
+
+    .mobile-nav-panel a {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2rem;
+      font-weight: 700;
+      color: rgba(255,255,255,0.7);
+      padding: 0.8rem 0;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      transition: color 0.3s;
+    }
+
+    .mobile-nav-panel a:hover { color: var(--gold); }
+
+    /* ========== SCROLL REVEAL ========== */
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.7s var(--ease), transform 0.7s var(--ease);
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    /* ========== RESPONSIVE ========== */
+    @media (max-width: 1024px) {
+      .about-grid, .admission-grid, .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
+      .about-pillars { grid-template-columns: 1fr 1fr; }
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 2.5rem; }
+      .programs-grid { grid-template-columns: 1fr; }
+      .program-card { min-height: 280px; }
+    }
+
+    @media (max-width: 768px) {
+      :root { --nav-h: 68px; }
+      .hero { grid-template-columns: 1fr; min-height: auto; }
+      .hero-left { padding: 4rem 5%; }
+      .hero-left::after { display: none; }
+      .hero-right { height: 55vw; }
+      .hero-stat-strip { grid-template-columns: repeat(2, 1fr); }
+      .nav-links { display: none; }
+      .nav-burger { display: flex; }
+      .gallery-preview-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+      }
+      .gp-item:nth-child(1) { grid-column: span 2; grid-row: span 1; height: 240px; }
+      .why-grid { grid-template-columns: 1fr; gap: 2px; }
+      .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .footer-bottom { flex-direction: column; gap: 0.5rem; text-align: center; }
+      .anthem-grid { grid-template-columns: 1fr; }
+      .about-pillars { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 480px) {
+      .hero-stat-strip { grid-template-columns: 1fr 1fr; }
+      .hero-actions { flex-direction: column; }
+      .hero-actions .btn-primary, .hero-actions .btn-outline { width: 100%; justify-content: center; }
+    }
+
+    /* ========== LIGHTBOX STUB (Gallery page) ========== */
+    .lb-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.92);
+      z-index: 9999;
+      align-items: center;
+      justify-content: center;
+    }
+    .lb-overlay.open { display: flex; }
+    .lb-close {
+      position: absolute;
+      top: 1.5rem; right: 1.5rem;
+      color: var(--white);
+      font-size: 2rem;
+      cursor: pointer;
+      background: none;
+      border: none;
+      line-height: 1;
+      transition: color 0.3s;
+    }
+    .lb-close:hover { color: var(--gold); }
+    .lb-img { max-width: 90vw; max-height: 88vh; object-fit: contain; }
+  </style>
 </head>
 <body>
-    <!-- Decorative elements -->
-    <div class="water-drop" style="top: 10%; left: 5%; width: 40px; height: 40px; animation-delay: 0s;"></div>
-    <div class="water-drop" style="top: 20%; left: 90%; width: 60px; height: 60px; animation-delay: 1s;"></div>
-    <div class="water-drop" style="top: 50%; left: 15%; width: 30px; height: 30px; animation-delay: 2s;"></div>
-    <div class="water-drop" style="top: 70%; left: 80%; width: 50px; height: 50px; animation-delay: 3s;"></div>
-    
-    <div class="colorful-curve" style="top: 15%; left: 70%; background: var(--primary-blue); width: 250px; height: 250px; animation-delay: 0s;"></div>
-    <div class="colorful-curve" style="top: 60%; left: 10%; background: var(--primary-yellow); width: 200px; height: 200px; animation-delay: 5s;"></div>
-    <div class="colorful-curve" style="top: 30%; left: 80%; background: var(--primary-green); width: 180px; height: 180px; animation-delay: 10s;"></div>
 
-    <div class="floating-shape shape-circle" style="top: 20%; left: 5%; width: 80px; height: 80px; animation-delay: 0s;"></div>
-    <div class="floating-shape shape-triangle" style="top: 40%; left: 85%; animation-delay: 2s;"></div>
-    <div class="floating-shape shape-square" style="top: 65%; left: 8%; width: 60px; height: 60px; animation-delay: 4s;"></div>
-    <div class="floating-shape shape-star" style="top: 25%; left: 90%; width: 70px; height: 70px; animation-delay: 1s;"></div>
-    <div class="floating-shape shape-heart" style="top: 75%; left: 88%; width: 60px; height: 60px; animation-delay: 3s;"></div>
+<!-- ========== NAV ========== -->
+<nav id="mainNav">
+  <div class="container nav-inner">
+    <a href="#home" class="nav-brand">
+      <img src="media/logo.png" alt="PCIS Logo" onerror="this.style.display='none'">
+      <div class="brand-text">
+        <div class="brand-name">Proper Child International School</div>
+        <div class="brand-motto">Bringing out the best in our children</div>
+      </div>
+    </a>
 
-    <div class="crayon" style="top: 15%; left: 12%; background: var(--primary-blue); animation-delay: 0s;"></div>
-    <div class="crayon" style="top: 30%; left: 92%; background: var(--primary-red); animation-delay: 1s;"></div>
-    <div class="crayon" style="top: 60%; left: 5%; background: var(--primary-green); animation-delay: 2s;"></div>
-    <div class="crayon" style="top: 80%; left: 90%; background: var(--primary-yellow); animation-delay: 3s;"></div>
+    <ul class="nav-links" id="desktopNav">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#programs">Programs</a></li>
+      <li><a href="#gallery-preview">Gallery</a></li>
+      <li><a href="#admission">Admission</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#anthem">Anthems</a></li>
+      <li><a href="gallery.html" class="nav-cta">Full Gallery</a></li>
+    </ul>
 
-    <div class="bubble" style="top: 10%; left: 20%; width: 30px; height: 30px; animation-delay: 0s;"></div>
-    <div class="bubble" style="top: 40%; left: 10%; width: 40px; height: 40px; animation-delay: 2s;"></div>
-    <div class="bubble" style="top: 70%; left: 15%; width: 25px; height: 25px; animation-delay: 1s;"></div>
-    <div class="bubble" style="top: 25%; left: 80%; width: 35px; height: 35px; animation-delay: 3s;"></div>
-    <div class="bubble" style="top: 55%; left: 85%; width: 45px; height: 45px; animation-delay: 4s;"></div>
-    <div class="bubble" style="top: 85%; left: 75%; width: 30px; height: 30px; animation-delay: 2.5s;"></div>
+    <div class="nav-burger" id="burger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
 
-    <div class="mobile-animation">
-        <div class="bubble" style="top: 15%; left: 5%; width: 25px; height: 25px; animation-delay: 0.5s;"></div>
-        <div class="bubble" style="top: 35%; left: 90%; width: 20px; height: 20px; animation-delay: 1.5s;"></div>
-        <div class="bubble" style="top: 65%; left: 8%; width: 15px; height: 15px; animation-delay: 2.5s;"></div>
+<!-- Mobile Nav -->
+<div class="mobile-nav-panel" id="mobilePanel">
+  <a href="#home" class="mob-link">Home</a>
+  <a href="#about" class="mob-link">About</a>
+  <a href="#programs" class="mob-link">Programs</a>
+  <a href="#gallery-preview" class="mob-link">Gallery</a>
+  <a href="#admission" class="mob-link">Admission</a>
+  <a href="#contact" class="mob-link">Contact</a>
+  <a href="#anthem" class="mob-link">Anthems</a>
+  <a href="gallery.html" class="mob-link">Full Gallery →</a>
+</div>
+
+<!-- ========== HERO ========== -->
+<section id="home" class="hero">
+  <div class="hero-left">
+    <span class="hero-year">Est. 2011 · Igbo Etche, Rivers State</span>
+    <h1 class="heading-xl hero-title">
+      Where Every<br>Child Shines
+    </h1>
+    <p class="hero-subtitle">
+      "Proper Child International School — nurturing curious minds, confident hearts, and the leaders Nigeria deserves."
+    </p>
+    <div class="hero-actions">
+      <a href="#admission" class="btn-primary"><i class="fas fa-pen-nib"></i> Enroll Now</a>
+      <a href="#about" class="btn-outline"><i class="fas fa-play"></i> Our Story</a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <img src="media/background.jpg" alt="Proper Child International School campus" id="heroImg">
+  </div>
+  <div class="hero-stat-strip">
+    <div class="hero-stat">
+      <div class="stat-num">14+</div>
+      <div class="stat-label">Years of Excellence</div>
+    </div>
+    <div class="hero-stat">
+      <div class="stat-num">3</div>
+      <div class="stat-label">Levels of Education</div>
+    </div>
+    <div class="hero-stat">
+      <div class="stat-num">ICT</div>
+      <div class="stat-label">Equipped Centre</div>
+    </div>
+    <div class="hero-stat">
+      <div class="stat-num">100%</div>
+      <div class="stat-label">Dedicated Staff</div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== ABOUT ========== -->
+<section id="about" class="section white">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-img-wrap reveal">
+        <img src="media/about.jpg" alt="Students at Proper Child International School">
+        <div class="about-badge">
+          <div class="badge-num">14</div>
+          <div class="badge-text">Years Strong</div>
+        </div>
+      </div>
+      <div class="about-body reveal">
+        <span class="tag">Our Story</span>
+        <h2 class="heading-lg">Built on a<br>simple belief —<br><em style="font-style:italic; color:var(--gold);">every child matters.</em></h2>
+        <span class="gold-rule"></span>
+        <p>Founded in 2011, Proper Child International School was born from a conviction that quality education should not be a privilege of geography or wealth. Nestled in Umuotube Chokota, Igbo Etche, we serve families across Rivers State who refuse to settle for less for their children.</p>
+        <p>Our approach blends academic rigour with character formation — because a diploma without values is just paper. We graduate young people who are not only prepared for examinations, but prepared for life.</p>
+
+        <div class="about-pillars">
+          <div class="pillar">
+            <div class="pillar-icon"><i class="fas fa-flask"></i></div>
+            <div>
+              <h4>Science Lab</h4>
+              <p>Modern equipment for hands-on practical learning</p>
+            </div>
+          </div>
+          <div class="pillar">
+            <div class="pillar-icon"><i class="fas fa-laptop-code"></i></div>
+            <div>
+              <h4>ICT Centre</h4>
+              <p>Digital literacy from an early age</p>
+            </div>
+          </div>
+          <div class="pillar">
+            <div class="pillar-icon"><i class="fas fa-book-open"></i></div>
+            <div>
+              <h4>Rich Library</h4>
+              <p>Wide reading fosters wide thinking</p>
+            </div>
+          </div>
+          <div class="pillar">
+            <div class="pillar-icon"><i class="fas fa-chalkboard-teacher"></i></div>
+            <div>
+              <h4>Expert Teachers</h4>
+              <p>Qualified, motivated & caring staff</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== QUOTE BAND ========== -->
+<div class="quote-band">
+  <div class="container" style="text-align:center;">
+    <span class="quote-mark">&ldquo;</span>
+    <p class="quote-text">The roots of education are bitter, but the fruit is sweet. At Proper Child, we tend the roots together — teachers, parents, and children — so the harvest belongs to all of Rivers State.</p>
+    <span class="quote-attr">— Founder's Vision, Proper Child International School</span>
+  </div>
+</div>
+
+<!-- ========== PROGRAMS ========== -->
+<section id="programs" class="section white" style="padding-bottom:0;">
+  <div class="container">
+    <div class="section-header center reveal">
+      <span class="tag">What We Offer</span>
+      <h2 class="heading-lg">Three Stages,<br>One Continuous Journey</h2>
+      <span class="gold-rule center"></span>
+    </div>
+  </div>
+  <div class="programs-grid reveal">
+    <div class="program-card">
+      <div class="program-bg program-bg-1"></div>
+      <div class="program-icon"><i class="fas fa-seedling"></i></div>
+      <div class="program-inner">
+        <div class="program-level">Stage One</div>
+        <div class="program-name">Nursery &<br>Reception</div>
+        <div class="program-desc">Play-based exploration that builds curiosity, social skills, and the joy of learning from the very start.</div>
+        <a href="#admission" class="program-link">Begin Enrollment <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+    <div class="program-card">
+      <div class="program-bg program-bg-2"></div>
+      <div class="program-icon"><i class="fas fa-book"></i></div>
+      <div class="program-inner">
+        <div class="program-level">Stage Two</div>
+        <div class="program-name">Primary<br>School</div>
+        <div class="program-desc">A strong academic foundation in literacy, numeracy, sciences and the arts. Preparing confident junior learners.</div>
+        <a href="#admission" class="program-link">Begin Enrollment <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+    <div class="program-card">
+      <div class="program-bg program-bg-3"></div>
+      <div class="program-icon"><i class="fas fa-graduation-cap"></i></div>
+      <div class="program-inner">
+        <div class="program-level">Stage Three</div>
+        <div class="program-name">Secondary<br>Education</div>
+        <div class="program-desc">JSS and SSS programmes with strong WAEC/NECO preparation, ICT integration, and leadership formation.</div>
+        <a href="#admission" class="program-link">Begin Enrollment <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== WHY US ========== -->
+<section class="section white">
+  <div class="container">
+    <div class="section-header center reveal">
+      <span class="tag">Why Families Choose Us</span>
+      <h2 class="heading-lg">The Proper Child Difference</h2>
+      <span class="gold-rule center"></span>
+    </div>
+  </div>
+  <div class="why-grid reveal">
+    <div class="why-item">
+      <div class="why-icon"><i class="fas fa-star"></i></div>
+      <h3>Academic Excellence</h3>
+      <p>Consistent results in internal and external examinations, with a culture that rewards hard work and curiosity.</p>
+    </div>
+    <div class="why-item">
+      <div class="why-icon"><i class="fas fa-heart"></i></div>
+      <h3>Christian Values</h3>
+      <p>Character, integrity, and service to community are taught alongside every subject in our curriculum.</p>
+    </div>
+    <div class="why-item">
+      <div class="why-icon"><i class="fas fa-shield-alt"></i></div>
+      <h3>Safe Environment</h3>
+      <p>A secure, nurturing campus where every child is known by name and every parent is treated as a partner.</p>
+    </div>
+    <div class="why-item">
+      <div class="why-icon"><i class="fas fa-globe-africa"></i></div>
+      <h3>Global Outlook</h3>
+      <p>Preparing children for a world beyond Etche — with digital skills, critical thinking, and confidence.</p>
+    </div>
+    <div class="why-item">
+      <div class="why-icon"><i class="fas fa-trophy"></i></div>
+      <h3>Sports & Culture</h3>
+      <p>Annual sports days, cultural events, and music programmes ensure children develop the whole person.</p>
+    </div>
+    <div class="why-item">
+      <div class="why-icon"><i class="fas fa-users"></i></div>
+      <h3>Small Class Sizes</h3>
+      <p>Every student gets the teacher attention they deserve — no child is ever left behind or overlooked.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ========== GALLERY PREVIEW ========== -->
+<section id="gallery-preview" class="section cream">
+  <div class="container">
+    <div class="section-header center reveal">
+      <span class="tag">Life at PCIS</span>
+      <h2 class="heading-lg">A Glimpse Inside<br>Our School</h2>
+      <span class="gold-rule center"></span>
     </div>
 
-    <!-- Header & Navigation -->
-    <header>
-        <div class="container header-container">
-            <div class="logo">
-                <div class="logo-img">
-                    <img src="media/logo.png" alt="Proper Child International School Logo" onerror="this.style.display='none'; document.getElementById('logo-fallback').style.display='block';">
-                    <i class="fas fa-school" style="display: none; color: white; font-size: 1.8rem;" id="logo-fallback"></i>
-                </div>
-                <div class="logo-text">
-                    <div class="logo-title">PROPER CHILD INTERNATIONAL SCHOOL</div>
-                    <div class="logo-subtitle">Bringing out the best in our children</div>
-                </div>
-            </div>
-            <nav>
-                <ul class="nav-list">
-                    <li class="nav-item"><a href="#home" class="nav-link">HOME</a></li>
-                    <li class="nav-item"><a href="#about" class="nav-link">ABOUT US</a></li>
-                    <li class="nav-item"><a href="#gallery" class="nav-link">GALLERY</a></li>
-                    <li class="nav-item"><a href="#admission" class="nav-link">ADMISSION</a></li>
-                    <li class="nav-item"><a href="#contact" class="nav-link">CONTACT US</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link anthem-link">ANTHEM</a></li>
-                </ul>
-                <div class="burger">
-                    <div class="line1"></div>
-                    <div class="line2"></div>
-                    <div class="line3"></div>
-                </div>
-            </nav>
-        </div>
-    </header>
-
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="container hero-content">
-            <h1 class="hero-title">PROPER CHILD INTERNATIONAL SCHOOL</h1>
-            <h2 class="hero-subtitle">"Bringing out the best in our children"</h2>
-            <p class="hero-text">Established in 2011, we provide quality education with modern facilities and experienced teachers to nurture future leaders.</p>
-            <a href="#admission" class="btn">Enroll Now</a>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="section about">
-        <div class="container">
-            <h2 class="section-title">About Us</h2>
-            <div class="about-content">
-                <div class="about-image">
-                    <img src="media/about.jpg" alt="Proper Child International School" onerror="this.style.display='none'">
-                </div>
-                <div class="about-text">
-                    <p>Proper Child International School was established in 2011 with a vision to provide quality education that brings out the best in every child. Our mission is to nurture well-rounded individuals who are prepared to face the challenges of the future.</p>
-                    <p>Located at Proper Child Avenue, off Palm View Road, Umuotube Chokota, Igbo Etche, Rivers State, our school provides a conducive learning environment with modern facilities.</p>
-                    <div class="features">
-                        <div class="feature">
-                            <div class="feature-icon"><i class="fas fa-flask"></i></div>
-                            <h3>Equipped Laboratory</h3>
-                            <p>Modern science labs for practical learning</p>
-                        </div>
-                        <div class="feature">
-                            <div class="feature-icon"><i class="fas fa-laptop-code"></i></div>
-                            <h3>ICT Center</h3>
-                            <p>Computer education for digital literacy</p>
-                        </div>
-                        <div class="feature">
-                            <div class="feature-icon"><i class="fas fa-chalkboard-teacher"></i></div>
-                            <h3>Experienced Teachers</h3>
-                            <p>Qualified and dedicated teaching staff</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Gallery Section -->
-    <section id="gallery" class="section gallery">
-        <div class="container">
-            <h2 class="section-title">School Gallery</h2>
-            <p style="text-align: center; margin-bottom: 2rem;">Browse through our collection of school memories and events</p>
-            
-            <div class="gallery-tabs">
-                <div class="gallery-tab active" data-tab="page1">Page 1</div>
-                <div class="gallery-tab" data-tab="page2">Page 2</div>
-            </div>
-            
-            <div class="gallery-page active" id="gallery-page1">
-                <div class="gallery-grid">
-                    <div class="gallery-item">
-                        <img src="gallery/image1.jpg" alt="School Building" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                        <div class="image-placeholder" style="display: none;">School Building</div>
-                        <div class="gallery-caption">Main School Building</div>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="gallery/image2.jpg" alt="Classroom" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                        <div class="image-placeholder" style="display: none;">Classroom</div>
-                        <div class="gallery-caption">Modern Classroom</div>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="gallery/image3.jpg" alt="Science Lab" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                        <div class="image-placeholder" style="display: none;">Science Lab</div>
-                        <div class="gallery-caption">Science Laboratory</div>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="gallery/image4.jpg" alt="Computer Lab" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                        <div class="image-placeholder" style="display: none;">Computer Lab</div>
-                        <div class="gallery-caption">Computer Laboratory</div>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="gallery/image5.jpg" alt="Library" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                        <div class="image-placeholder" style="display: none;">Library</div>
-                        <div class="gallery-caption">School Library</div>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="gallery/image6.jpg" alt="Sports Day" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                        <div class="image-placeholder" style="display: none;">Sports Day</div>
-                        <div class="gallery-caption">Annual Sports Day</div>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="gallery/image7.jpg" alt="Students in Class" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                        <div class="image-placeholder" style="display: none;">Students in Class</div>
-                        <div class="gallery-caption">Active Learning</div>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="gallery/image8.jpg" alt="Art Class" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                        <div class="image-placeholder" style="display: none;">Art Class</div>
-                        <div class="gallery-caption">Art & Creativity</div>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="gallery/image9.jpg" alt="School Event" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                        <div class="image-placeholder" style="display: none;">School Event</div>
-                        <div class="gallery-caption">Cultural Event</div>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="gallery/image10.jpg" alt="Graduation" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                        <div class="image-placeholder" style="display: none;">Graduation</div>
-                        <div class="gallery-caption">Graduation Ceremony</div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="gallery-page" id="gallery-page2">
-                <div class="gallery-grid" id="gallery-page2-container"></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Admission Section -->
-    <section id="admission" class="section admission">
-        <div class="container">
-            <h2 class="section-title">Admission Process</h2>
-            <div class="admission-content">
-                <div class="admission-image">
-                    <img src="media/admission.jpg" alt="Admission at Proper Child International School" onerror="this.style.display='none'">
-                </div>
-                <div class="admission-info">
-                    <p>We welcome students who are eager to learn and grow with us. Our admission process is designed to be straightforward and transparent.</p>
-                    <div class="process-steps">
-                        <div class="step">
-                            <div class="step-number">1</div>
-                            <div class="step-content">
-                                <h3>Inquiry</h3>
-                                <p>Contact us via phone, email, or visit our school to learn more about our programs.</p>
-                            </div>
-                        </div>
-                        <div class="step">
-                            <div class="step-number">2</div>
-                            <div class="step-content">
-                                <h3>Application</h3>
-                                <p>Fill out the application form and submit required documents.</p>
-                            </div>
-                        </div>
-                        <div class="step">
-                            <div class="step-number">3</div>
-                            <div class="step-content">
-                                <h3>Assessment</h3>
-                                <p>Students may be assessed to determine appropriate placement.</p>
-                            </div>
-                        </div>
-                        <div class="step">
-                            <div class="step-number">4</div>
-                            <div class="step-content">
-                                <h3>Enrollment</h3>
-                                <p>Complete the enrollment process and welcome to Proper Child International School!</p>
-                            </div>
-                        </div>
-                    </div>
-                    <a href="#contact" class="btn">Contact for Admission</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="section">
-        <div class="container">
-            <h2 class="section-title">Contact Us</h2>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="contact-details">
-                        <div class="contact-item">
-                            <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
-                            <p>Proper Child Avenue, off Palm View Road, Umuotube Chokota, Igbo Etche, Rivers State</p>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-icon"><i class="fas fa-phone"></i></div>
-                            <p>08039384269, 08038700545</p>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
-                            <p>properchildintlschool@gmail.com</p>
-                        </div>
-                    </div>
-                    <h3>Follow Us on Social Media</h3>
-                    <div class="social-links">
-                        <a href="https://facebook.com" class="social-link"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://twitter.com" class="social-link"><i class="fab fa-twitter"></i></a>
-                        <a href="https://instagram.com" class="social-link"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-                <div class="map">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3979.835953236289!2d7.052509314091266!3d4.855252296489879!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1069cd1ac0e4e96b%3A0x406b5638b32320!2sRivers%20State!5e0!3m2!1sen!2sng!4v1657798008827!5m2!1sen!2sng" allowfullscreen="" loading="lazy"></iframe>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-column">
-                    <h3 class="footer-title">Proper Child International School</h3>
-                    <p>"Bringing out the best in our children"</p>
-                    <p>Established in 2011</p>
-                </div>
-                <div class="footer-column">
-                    <h3 class="footer-title">Quick Links</h3>
-                    <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About Us</a></li>
-                        <li><a href="#gallery">Gallery</a></li>
-                        <li><a href="#admission">Admission</a></li>
-                        <li><a href="#contact">Contact Us</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h3 class="footer-title">Contact Info</h3>
-                    <p><i class="fas fa-map-marker-alt"></i> Proper Child Avenue, off Palm View Road, Umuotube Chokota, Igbo Etche, Rivers State</p>
-                    <p><i class="fas fa-phone"></i> 08039384269, 08038700545</p>
-                </div>
-            </div>
-            <div class="copyright">
-                <p>&copy; 2025 Proper Child International School. All Rights Reserved.</p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Anthem Modal -->
-    <div id="anthem-modal" class="modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2>National & School Anthems</h2>
-                <span class="close-modal">&times;</span>
-            </div>
-            <div class="modal-body">
-                <div class="anthem-section">
-                    <h3 class="anthem-title"><i class="fas fa-music"></i> Nigerian National Anthem (2025)</h3>
-                    <div class="anthem-text">
-                        <p>Nigeria, we hail thee,</p>
-                        <p>Our own dear native land,</p>
-                        <p>Though tribe and tongue may differ,</p>
-                        <p>In brotherhood, we stand,</p>
-                        <p>Nigerians all, and proud to serve</p>
-                        <p>Our sovereign Motherland.</p>
-                        <br>
-                        <p>Our flag shall be a symbol</p>
-                        <p>That truth and justice reign,</p>
-                        <p>In peace or battle honour'd,</p>
-                        <p>And this we count as gain,</p>
-                        <p>To hand on to our children</p>
-                        <p>A banner without stain.</p>
-                        <br>
-                        <p>O God of all creation,</p>
-                        <p>Grant this our one request,</p>
-                        <p>Help us to build a nation</p>
-                        <p>Where no man is oppressed,</p>
-                        <p>And so with peace and plenty</p>
-                        <p>Nigeria may be blessed.</p>
-                    </div>
-                    <div class="play-btn" id="play-anthem">
-                        <i class="fas fa-play-circle"></i> Play Anthem
-                    </div>
-                    <audio id="anthem-audio" src="media/nigerian_anthem.mp3"></audio>
-                </div>
-                
-                <div class="anthem-section">
-                    <h3 class="anthem-title"><i class="fas fa-flag"></i> National Pledge</h3>
-                    <div class="anthem-text">
-                        <p>I pledge to Nigeria my country</p>
-                        <p>To be faithful, loyal and honest</p>
-                        <p>To serve Nigeria with all my strength</p>
-                        <p>To defend her unity</p>
-                        <p>And uphold her honor and glory</p>
-                        <p>So help me God.</p>
-                    </div>
-                </div>
-                
-                <div class="anthem-section">
-                    <h3 class="anthem-title"><i class="fas fa-music"></i> School Anthem</h3>
-                    <div class="anthem-text">
-                        <p>Great Children of Proper Child</p>
-                        <p>A pupil being equipped to build our country</p>
-                        <p>And be future leaders</p>
-                        <p>Let us stand on foundation high and inspired</p>
-                        <p>To do great deeds that will make our world a better place.</p>
-                    </div>
-                </div>
-                
-                <div class="anthem-section">
-                    <h3 class="anthem-title"><i class="fas fa-star"></i> School Pledge</h3>
-                    <div class="anthem-text">
-                        <p>As a student of Proper Child International School</p>
-                        <p>I pledge to be a worthy ambassador</p>
-                        <p>And to promote her symbol of quality education</p>
-                        <p>And Christian value everywhere I go</p>
-                        <p>And to be an outstanding student among other students</p>
-                        <p>So help me God.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <div class="gallery-preview-grid reveal" id="gpGrid">
+      <!-- JS fills these -->
     </div>
 
-    <script>
-        // Navigation functionality
-        const burger = document.querySelector('.burger');
-        const nav = document.querySelector('.nav-list');
-        const navLinks = document.querySelectorAll('.nav-link');
-        const anthemLink = document.querySelector('.anthem-link');
-        const modal = document.getElementById('anthem-modal');
-        const closeModal = document.querySelector('.close-modal');
-        const playAnthemBtn = document.getElementById('play-anthem');
-        const anthemAudio = document.getElementById('anthem-audio');
+    <div class="gallery-cta">
+      <a href="gallery.html" class="btn-green">
+        <i class="fas fa-images"></i> View Full Gallery
+      </a>
+    </div>
+  </div>
+</section>
 
-        // Toggle mobile navigation
-        burger.addEventListener('click', () => {
-            nav.classList.toggle('active');
-            burger.classList.toggle('toggle');
-        });
+<!-- ========== ADMISSION ========== -->
+<section id="admission" class="section white">
+  <div class="container">
+    <div class="admission-grid">
+      <div class="reveal">
+        <img src="media/admission.jpg" alt="Student enrollment at Proper Child International School" class="admission-img">
+      </div>
+      <div class="reveal">
+        <span class="tag">Join Our Family</span>
+        <h2 class="heading-lg">Admission is<br>Open — Let's Talk</h2>
+        <span class="gold-rule"></span>
+        <p style="font-size:0.95rem;color:var(--mid-grey);line-height:1.8;margin-bottom:2rem;">
+          We welcome applications for Nursery, Primary, and Secondary classes throughout the year. Our process is simple, honest, and designed with the child's best interest first.
+        </p>
+        <div class="steps">
+          <div class="step-item">
+            <div class="step-num">01</div>
+            <div class="step-body">
+              <h4>Make an Inquiry</h4>
+              <p>Call us, send an email, or simply walk in. We're always happy to answer questions from parents and guardians.</p>
+            </div>
+          </div>
+          <div class="step-item">
+            <div class="step-num">02</div>
+            <div class="step-body">
+              <h4>Submit Application</h4>
+              <p>Complete the admission form and provide the required documents listed below.</p>
+            </div>
+          </div>
+          <div class="step-item">
+            <div class="step-num">03</div>
+            <div class="step-body">
+              <h4>Assessment Day</h4>
+              <p>A brief, friendly assessment helps us place your child in the right class for their level and confidence.</p>
+            </div>
+          </div>
+          <div class="step-item">
+            <div class="step-num">04</div>
+            <div class="step-body">
+              <h4>Welcome to PCIS!</h4>
+              <p>Complete enrollment, collect your child's materials, and join the Proper Child family.</p>
+            </div>
+          </div>
+        </div>
+        <div class="req-list">
+          <h4>Documents Required</h4>
+          <ul>
+            <li>Birth certificate or declaration of age</li>
+            <li>Previous school report card (if applicable)</li>
+            <li>4 recent passport photographs</li>
+            <li>Parent/guardian ID card</li>
+          </ul>
+        </div>
+        <div style="margin-top:2rem;">
+          <a href="#contact" class="btn-primary"><i class="fas fa-phone"></i> Contact Admissions</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-        navLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                nav.classList.remove('active');
-                burger.classList.remove('toggle');
-            });
-        });
+<!-- ========== CONTACT ========== -->
+<section id="contact" class="section cream">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="tag">Get in Touch</span>
+      <h2 class="heading-lg">We'd Love to<br>Hear From You</h2>
+      <span class="gold-rule"></span>
+    </div>
+    <div class="contact-grid">
+      <div class="reveal">
+        <div class="contact-card">
+          <div class="contact-card-icon"><i class="fas fa-map-marker-alt"></i></div>
+          <div class="contact-card-body">
+            <h4>Our Location</h4>
+            <p>Proper Child Avenue, off Palm View Road,<br>Umuotube Chokota, Igbo Etche,<br>Rivers State, Nigeria</p>
+          </div>
+        </div>
+        <div class="contact-card">
+          <div class="contact-card-icon"><i class="fas fa-phone"></i></div>
+          <div class="contact-card-body">
+            <h4>Call Us</h4>
+            <a href="tel:08039384269">08039384269</a><br>
+            <a href="tel:08038700545">08038700545</a>
+          </div>
+        </div>
+        <div class="contact-card">
+          <div class="contact-card-icon"><i class="fas fa-envelope"></i></div>
+          <div class="contact-card-body">
+            <h4>Email</h4>
+            <a href="mailto:properchildintlschool@gmail.com">properchildintlschool@gmail.com</a>
+          </div>
+        </div>
 
-        // Anthem modal functionality
-        anthemLink.addEventListener('click', (e) => {
-            e.preventDefault();
-            modal.style.display = 'block';
-            document.body.style.overflow = 'hidden';
-        });
+        <div style="margin-top:0.8rem;">
+          <p style="font-size:0.82rem;text-transform:uppercase;letter-spacing:0.12em;color:var(--mid-grey);margin-bottom:0.7rem;font-weight:600;">Follow Us</p>
+          <div class="social-row">
+            <a href="https://facebook.com" class="social-btn" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://twitter.com" class="social-btn" target="_blank" rel="noopener" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="https://instagram.com" class="social-btn" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://wa.me/2348039384269" class="social-btn" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+      </div>
 
-        closeModal.addEventListener('click', () => {
-            modal.style.display = 'none';
-            document.body.style.overflow = 'auto';
-            if (anthemAudio) {
-                anthemAudio.pause();
-                playAnthemBtn.innerHTML = '<i class="fas fa-play-circle"></i> Play Anthem';
-            }
-        });
+      <div class="reveal">
+        <div class="map-wrap">
+          <iframe
+            title="Proper Child International School Map"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3979.835953236289!2d7.052509314091266!3d4.855252296489879!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1069cd1ac0e4e96b%3A0x406b5638b32320!2sRivers%20State!5e0!3m2!1sen!2sng!4v1657798008827!5m2!1sen!2sng"
+            allowfullscreen loading="lazy">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-        window.addEventListener('click', (e) => {
-            if (e.target === modal) {
-                modal.style.display = 'none';
-                document.body.style.overflow = 'auto';
-                if (anthemAudio) {
-                    anthemAudio.pause();
-                    playAnthemBtn.innerHTML = '<i class="fas fa-play-circle"></i> Play Anthem';
-                }
-            }
-        });
+<!-- ========== ANTHEM / PLEDGE SECTION ========== -->
+<section id="anthem" class="section dark">
+  <div class="container">
+    <div class="section-header center reveal">
+      <span class="tag">Our Words of Commitment</span>
+      <h2 class="heading-lg" style="color:var(--white);">Anthems &amp; Pledges</h2>
+      <span class="gold-rule center"></span>
+    </div>
 
-        // Play anthem audio
-        if (playAnthemBtn && anthemAudio) {
-            playAnthemBtn.addEventListener('click', () => {
-                if (anthemAudio.paused) {
-                    anthemAudio.play();
-                    playAnthemBtn.innerHTML = '<i class="fas fa-pause-circle"></i> Pause Anthem';
-                } else {
-                    anthemAudio.pause();
-                    playAnthemBtn.innerHTML = '<i class="fas fa-play-circle"></i> Play Anthem';
-                }
-            });
-        }
+    <div class="anthem-grid reveal">
+      <div class="anthem-card">
+        <div class="anthem-card-title"><i class="fas fa-music"></i> Nigerian National Anthem (2025)</div>
+        <div class="anthem-lines">
+          <p>Nigeria, we hail thee,</p>
+          <p>Our own dear native land,</p>
+          <p>Though tribe and tongue may differ,</p>
+          <p>In brotherhood, we stand,</p>
+          <p>Nigerians all, and proud to serve</p>
+          <p>Our sovereign Motherland.</p>
+          <p>&nbsp;</p>
+          <p>O God of all creation,</p>
+          <p>Grant this our one request,</p>
+          <p>Help us to build a nation</p>
+          <p>Where no man is oppressed,</p>
+          <p>And so with peace and plenty</p>
+          <p>Nigeria may be blessed.</p>
+        </div>
+        <div class="play-row">
+          <button class="play-btn-sm" id="playAnthemBtn">
+            <i class="fas fa-play"></i> Play Anthem
+          </button>
+          <audio id="anthemAudio" src="media/nigerian_anthem.mp3"></audio>
+        </div>
+      </div>
 
-        // Gallery tabs functionality
-        const galleryTabs = document.querySelectorAll('.gallery-tab');
-        const galleryPages = document.querySelectorAll('.gallery-page');
+      <div class="anthem-card">
+        <div class="anthem-card-title"><i class="fas fa-flag"></i> National Pledge</div>
+        <div class="anthem-lines">
+          <p>I pledge to Nigeria my country</p>
+          <p>To be faithful, loyal and honest</p>
+          <p>To serve Nigeria with all my strength</p>
+          <p>To defend her unity</p>
+          <p>And uphold her honor and glory</p>
+          <p>So help me God.</p>
+        </div>
+      </div>
 
-        galleryTabs.forEach(tab => {
-            tab.addEventListener('click', () => {
-                const targetTab = tab.getAttribute('data-tab');
-                galleryTabs.forEach(t => t.classList.remove('active'));
-                tab.classList.add('active');
-                galleryPages.forEach(page => page.classList.remove('active'));
-                document.getElementById(`gallery-${targetTab}`).classList.add('active');
-            });
-        });
+      <div class="anthem-card">
+        <div class="anthem-card-title"><i class="fas fa-star"></i> School Anthem</div>
+        <div class="anthem-lines">
+          <p>Great Children of Proper Child</p>
+          <p>A pupil being equipped to build our country</p>
+          <p>And be future leaders</p>
+          <p>Let us stand on foundation high and inspired</p>
+          <p>To do great deeds that will make our world a better place.</p>
+        </div>
+      </div>
 
-        // Generate gallery items for page 2
-        const galleryPage2Container = document.getElementById('gallery-page2-container');
-        const imageCount = 30;
-        const imageBasePath = 'gallery/image';
-        
-        for (let i = 11; i <= imageCount + 10; i++) {
-            const galleryItem = document.createElement('div');
-            galleryItem.className = 'gallery-item';
-            
-            const img = document.createElement('img');
-            img.src = `${imageBasePath}${i}.jpg`;
-            img.alt = `School Image ${i}`;
-            
-            const placeholder = document.createElement('div');
-            placeholder.className = 'image-placeholder';
-            placeholder.style.display = 'none';
-            placeholder.textContent = `School Activity ${i}`;
-            
-            const caption = document.createElement('div');
-            caption.className = 'gallery-caption';
-            caption.textContent = `School Activity ${i}`;
-            
-            img.onerror = function() {
-                this.style.display = 'none';
-                placeholder.style.display = 'flex';
-            };
-            
-            galleryItem.appendChild(img);
-            galleryItem.appendChild(placeholder);
-            galleryItem.appendChild(caption);
-            galleryPage2Container.appendChild(galleryItem);
-        }
+      <div class="anthem-card">
+        <div class="anthem-card-title"><i class="fas fa-hand-holding-heart"></i> School Pledge</div>
+        <div class="anthem-lines">
+          <p>As a student of Proper Child International School</p>
+          <p>I pledge to be a worthy ambassador</p>
+          <p>And to promote her symbol of quality education</p>
+          <p>And Christian value everywhere I go</p>
+          <p>And to be an outstanding student among other students</p>
+          <p>So help me God.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-        // Handle animations and decorative elements
-        document.addEventListener('DOMContentLoaded', () => {
-            // Add floating animation to elements
-            const floatingElements = document.querySelectorAll('.feature, .gallery-item, .step');
-            floatingElements.forEach(el => el.classList.add('floating'));
+<!-- ========== FOOTER ========== -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand-name">Proper Child International School</div>
+        <div class="footer-tagline">"Bringing out the best in our children"</div>
+        <p class="footer-about">Serving families across Rivers State since 2011. Offering Nursery, Primary, and Secondary education grounded in academic excellence and Christian values.</p>
+        <div class="social-row">
+          <a href="#" class="social-btn" style="border-color:rgba(255,255,255,0.15);color:rgba(255,255,255,0.5);" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-btn" style="border-color:rgba(255,255,255,0.15);color:rgba(255,255,255,0.5);" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="social-btn" style="border-color:rgba(255,255,255,0.15);color:rgba(255,255,255,0.5);" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://wa.me/2348039384269" class="social-btn" style="border-color:rgba(255,255,255,0.15);color:rgba(255,255,255,0.5);" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-heading">Quick Links</div>
+        <ul class="footer-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#programs">Programs</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="#admission">Admission</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#anthem">Anthems</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-heading">Programs</div>
+        <ul class="footer-links">
+          <li><a href="#programs">Nursery & Reception</a></li>
+          <li><a href="#programs">Primary School</a></li>
+          <li><a href="#programs">Secondary (JSS)</a></li>
+          <li><a href="#programs">Secondary (SSS)</a></li>
+          <li><a href="#admission">Apply Now</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-heading">Contact</div>
+        <div class="footer-contact-item">
+          <i class="fas fa-map-marker-alt"></i>
+          <span>Proper Child Avenue, off Palm View Road, Umuotube Chokota, Igbo Etche, Rivers State</span>
+        </div>
+        <div class="footer-contact-item">
+          <i class="fas fa-phone"></i>
+          <span><a href="tel:08039384269" style="color:inherit;">08039384269</a><br><a href="tel:08038700545" style="color:inherit;">08038700545</a></span>
+        </div>
+        <div class="footer-contact-item">
+          <i class="fas fa-envelope"></i>
+          <span><a href="mailto:properchildintlschool@gmail.com" style="color:inherit;">properchildintlschool@gmail.com</a></span>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2025 Proper Child International School. All rights reserved.</span>
+      <span>Designed with care · <a href="https://properchildintlschool.dedyn.io">properchildintlschool.dedyn.io</a></span>
+    </div>
+  </div>
+</footer>
 
-            // Create decorative elements
-            function createDecorativeElements() {
-                if (window.innerWidth > 768) {
-                    for (let i = 0; i < 5; i++) {
-                        createWaterDrop();
-                        createBubble();
-                    }
-                } else {
-                    for (let i = 0; i < 3; i++) {
-                        createMobileBubble();
-                    }
-                }
-            }
+<!-- Lightbox -->
+<div class="lb-overlay" id="lbOverlay">
+  <button class="lb-close" id="lbClose"><i class="fas fa-times"></i></button>
+  <img src="" alt="" class="lb-img" id="lbImg">
+</div>
 
-            function createWaterDrop() {
-                const drop = document.createElement('div');
-                drop.classList.add('water-drop');
-                const size = Math.random() * 40 + 20;
-                const left = Math.random() * 100;
-                const delay = Math.random() * 5;
-                
-                drop.style.width = `${size}px`;
-                drop.style.height = `${size}px`;
-                drop.style.left = `${left}%`;
-                drop.style.top = '-50px';
-                drop.style.animationDelay = `${delay}s`;
-                
-                const colors = [
-                    'rgba(52, 152, 219, 0.2)',
-                    'rgba(46, 204, 113, 0.2)',
-                    'rgba(155, 89, 182, 0.2)',
-                    'rgba(241, 196, 15, 0.2)'
-                ];
-                drop.style.background = colors[Math.floor(Math.random() * colors.length)];
-                
-                document.body.appendChild(drop);
-                
-                setTimeout(() => {
-                    drop.remove();
-                    if (window.innerWidth > 768) createWaterDrop();
-                }, 8000 + delay * 1000);
-            }
+<script>
+  /* ---- NAV SCROLL ---- */
+  const mainNav = document.getElementById('mainNav');
+  window.addEventListener('scroll', () => {
+    mainNav.classList.toggle('scrolled', window.scrollY > 50);
+  });
 
-            function createBubble() {
-                const bubble = document.createElement('div');
-                bubble.classList.add('bubble');
-                const size = Math.random() * 30 + 15;
-                const left = Math.random() * 100;
-                const delay = Math.random() * 5;
-                
-                bubble.style.width = `${size}px`;
-                bubble.style.height = `${size}px`;
-                bubble.style.left = `${left}%`;
-                bubble.style.top = '100%';
-                bubble.style.animationDelay = `${delay}s`;
-                
-                document.body.appendChild(bubble);
-                
-                setTimeout(() => {
-                    bubble.remove();
-                    if (window.innerWidth > 768) createBubble();
-                }, 12000 + delay * 1000);
-            }
+  /* ---- MOBILE BURGER ---- */
+  const burger = document.getElementById('burger');
+  const mobilePanel = document.getElementById('mobilePanel');
+  burger.addEventListener('click', () => {
+    burger.classList.toggle('open');
+    mobilePanel.classList.toggle('open');
+    document.body.style.overflow = mobilePanel.classList.contains('open') ? 'hidden' : '';
+  });
+  document.querySelectorAll('.mob-link').forEach(l => {
+    l.addEventListener('click', () => {
+      burger.classList.remove('open');
+      mobilePanel.classList.remove('open');
+      document.body.style.overflow = '';
+    });
+  });
 
-            function createMobileBubble() {
-                const bubble = document.createElement('div');
-                bubble.classList.add('bubble');
-                const size = Math.random() * 15 + 10;
-                const left = Math.random() * 100;
-                const delay = Math.random() * 5;
-                
-                bubble.style.width = `${size}px`;
-                bubble.style.height = `${size}px`;
-                bubble.style.left = `${left}%`;
-                bubble.style.top = '100%';
-                bubble.style.animationDelay = `${delay}s`;
-                bubble.style.opacity = '0.2';
-                
-                document.body.appendChild(bubble);
-                
-                setTimeout(() => {
-                    bubble.remove();
-                    if (window.innerWidth <= 768) createMobileBubble();
-                }, 12000 + delay * 1000);
-            }
+  /* ---- HERO IMAGE ANIMATION ---- */
+  document.getElementById('heroImg').addEventListener('load', function() {
+    this.classList.add('loaded');
+  });
 
-            createDecorativeElements();
+  /* ---- GALLERY PREVIEW ---- */
+  const gpGrid = document.getElementById('gpGrid');
+  const gpImages = [1,2,3,4,5,6];
+  const gpCaptions = ['School Community','Classroom Activity','Learning Together','Our Campus','Cultural Day','Sports & Fun'];
+  gpImages.forEach((n, i) => {
+    const d = document.createElement('div');
+    d.className = 'gp-item';
+    d.innerHTML = `
+      <img src="gallery/image${n}.jpg" alt="${gpCaptions[i]}" loading="lazy">
+      <div class="gp-overlay"><i class="fas fa-expand"></i></div>
+    `;
+    d.addEventListener('click', () => openLb(`gallery/image${n}.jpg`, gpCaptions[i]));
+    gpGrid.appendChild(d);
+  });
 
-            // Handle window resize
-            window.addEventListener('resize', () => {
-                document.documentElement.style.setProperty('--header-height', window.innerWidth <= 768 ? '70px' : '80px');
-                document.querySelectorAll('.water-drop, .bubble, .colorful-curve, .floating-shape, .crayon').forEach(el => el.remove());
-                createDecorativeElements();
-            });
-        });
-    </script>
+  /* ---- LIGHTBOX ---- */
+  const lbOverlay = document.getElementById('lbOverlay');
+  const lbImg = document.getElementById('lbImg');
+  function openLb(src, alt) {
+    lbImg.src = src; lbImg.alt = alt;
+    lbOverlay.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  document.getElementById('lbClose').addEventListener('click', closeLb);
+  lbOverlay.addEventListener('click', e => { if(e.target === lbOverlay) closeLb(); });
+  function closeLb() {
+    lbOverlay.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  document.addEventListener('keydown', e => { if(e.key === 'Escape') closeLb(); });
+
+  /* ---- ANTHEM AUDIO ---- */
+  const playBtn = document.getElementById('playAnthemBtn');
+  const audio = document.getElementById('anthemAudio');
+  if (playBtn && audio) {
+    playBtn.addEventListener('click', () => {
+      if (audio.paused) {
+        audio.play();
+        playBtn.innerHTML = '<i class="fas fa-pause"></i> Pause';
+      } else {
+        audio.pause();
+        playBtn.innerHTML = '<i class="fas fa-play"></i> Play Anthem';
+      }
+    });
+    audio.addEventListener('ended', () => {
+      playBtn.innerHTML = '<i class="fas fa-play"></i> Play Anthem';
+    });
+  }
+
+  /* ---- SCROLL REVEAL ---- */
+  const reveals = document.querySelectorAll('.reveal');
+  const ro = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => entry.target.classList.add('visible'), i * 80);
+        ro.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  reveals.forEach(el => ro.observe(el));
+</script>
 </body>
 </html>
