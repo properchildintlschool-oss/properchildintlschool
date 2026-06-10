@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Google Site Name Override -->
+  <meta name="application-name" content="Proper Child International School">
+  <meta name="apple-mobile-web-app-title" content="Proper Child International School">
+  <meta name="theme-color" content="#0D3D2B">
+
+  <!-- WebSite schema: tells Google what to show as the site name -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Proper Child International School",
+    "alternateName": ["PCIS", "Proper Child Intl School"],
+    "url": "https://properchildintlschool.dedyn.io"
+  }
+  </script>
+  <title>Gallery | Proper Child International School — Life at PCIS</title>
+  <meta name="description" content="Explore the vibrant school life at Proper Child International School — classrooms, sports days, cultural events, graduation ceremonies and more. Igbo Etche, Rivers State.">
+  <meta name="keywords" content="Proper Child International School gallery, PCIS photos, school life Igbo Etche, Rivers State school pictures, students Nigeria, school events Rivers State">
+  <link rel="canonical" href="https://properchildintlschool.dedyn.io/gallery.html">
+
+  <meta property="og:title" content="Gallery | Proper Child International School">
+  <meta property="og:description" content="A window into school life at PCIS — where every day is a memory worth keeping.">
+  <meta property="og:image" content="https://properchildintlschool.dedyn.io/gallery/image1.jpg">
+  <meta property="og:url" content="https://properchildintlschool.dedyn.io/gallery.html">
+  <meta property="og:type" content="website">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    :root {
+      --green:       #0D3D2B;
+      --green-mid:   #1A5C3F;
+      --gold:        #C9933A;
+      --gold-light:  #E8B96A;
+      --cream:       #FAF7F0;
+      --cream-dark:  #F0EBE0;
+      --charcoal:    #1C1C1C;
+      --mid-grey:    #6B6B6B;
+      --white:       #FFFFFF;
+      --nav-h:       72px;
+      --ease:        cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'DM Sans', sans-serif; background: var(--cream); color: var(--charcoal); overflow-x: hidden; }
+    a { text-decoration: none; color: inherit; }
+    img { display: block; max-width: 100%; }
+
+    .container { width: 92%; max-width: 1200px; margin: 0 auto; }
+
+    /* ===== NAV ===== */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0;
+      z-index: 900; height: var(--nav-h);
+      background: rgba(13,61,43,0.97);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(201,147,58,0.2);
+    }
+
+    .nav-inner {
+      height: 100%; display: flex;
+      align-items: center; justify-content: space-between;
+    }
+
+    .nav-brand {
+      display: flex; align-items: center; gap: 0.8rem;
+    }
+
+    .nav-brand img {
+      width: 40px; height: 40px; border-radius: 50%;
+      object-fit: cover; border: 2px solid var(--gold);
+    }
+
+    .brand-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1rem; font-weight: 700; color: var(--white);
+    }
+
+    .nav-back {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      font-size: 0.82rem; font-weight: 600; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--gold-light);
+      border: 1px solid rgba(201,147,58,0.35);
+      padding: 0.5rem 1.3rem;
+      transition: background 0.3s, color 0.3s;
+    }
+    .nav-back:hover { background: var(--gold); color: var(--white); }
+
+    /* ===== PAGE HERO ===== */
+    .page-hero {
+      padding-top: var(--nav-h);
+      background: var(--green);
+      padding-bottom: 4rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .page-hero::after {
+      content: '';
+      position: absolute;
+      bottom: -2px; left: 0; right: 0; height: 60px;
+      background: var(--cream);
+      clip-path: ellipse(55% 100% at 50% 100%);
+    }
+
+    .page-hero-inner {
+      padding: 4rem 1rem 3.5rem;
+      position: relative; z-index: 2;
+    }
+
+    .ph-tag {
+      display: inline-block;
+      font-size: 0.72rem; font-weight: 600;
+      letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 1rem;
+    }
+
+    .ph-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.2rem, 5vw, 4rem);
+      font-weight: 700; color: var(--white);
+      line-height: 1.1; margin-bottom: 1rem;
+    }
+
+    .ph-sub {
+      font-size: 1rem; color: rgba(255,255,255,0.65);
+      max-width: 540px; margin: 0 auto; line-height: 1.7;
+    }
+
+    /* ===== FILTER TABS ===== */
+    .filter-bar {
+      padding: 2.5rem 0 0.5rem;
+      display: flex; gap: 0.6rem;
+      flex-wrap: wrap; justify-content: center;
+    }
+
+    .filter-btn {
+      font-size: 0.8rem; font-weight: 600;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      padding: 0.55rem 1.4rem;
+      border: 1.5px solid var(--cream-dark);
+      background: var(--white);
+      color: var(--mid-grey);
+      cursor: pointer;
+      transition: all 0.3s var(--ease);
+    }
+
+    .filter-btn:hover { border-color: var(--gold); color: var(--gold); }
+
+    .filter-btn.active {
+      background: var(--green);
+      border-color: var(--green);
+      color: var(--white);
+    }
+
+    /* ===== MASONRY GALLERY ===== */
+    .gallery-section { padding: 2.5rem 0 5rem; }
+
+    .masonry {
+      columns: 4;
+      column-gap: 4px;
+    }
+
+    .masonry-item {
+      break-inside: avoid;
+      margin-bottom: 4px;
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+      display: block;
+    }
+
+    .masonry-item img {
+      width: 100%;
+      display: block;
+      transition: transform 0.55s var(--ease);
+    }
+
+    .masonry-item:hover img { transform: scale(1.06); }
+
+    .masonry-caption {
+      position: absolute; bottom: 0; left: 0; right: 0;
+      padding: 0.9rem 1rem 0.8rem;
+      background: linear-gradient(to top, rgba(13,61,43,0.88) 0%, transparent 100%);
+      transform: translateY(100%);
+      transition: transform 0.4s var(--ease);
+    }
+
+    .masonry-item:hover .masonry-caption { transform: translateY(0); }
+
+    .mc-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1rem; font-weight: 700;
+      color: var(--white); line-height: 1.2;
+    }
+
+    .mc-tag {
+      font-size: 0.7rem; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--gold-light);
+      margin-top: 0.2rem;
+    }
+
+    .masonry-zoom {
+      position: absolute; top: 0.7rem; right: 0.7rem;
+      width: 32px; height: 32px;
+      background: rgba(0,0,0,0.45);
+      display: flex; align-items: center; justify-content: center;
+      color: var(--white); font-size: 0.8rem;
+      opacity: 0; transition: opacity 0.3s;
+    }
+
+    .masonry-item:hover .masonry-zoom { opacity: 1; }
+
+    /* ===== EMPTY STATE ===== */
+    .empty-state {
+      text-align: center; padding: 5rem 1rem;
+      display: none;
+    }
+    .empty-state i { font-size: 3rem; color: var(--cream-dark); margin-bottom: 1rem; }
+    .empty-state p { color: var(--mid-grey); font-size: 0.95rem; }
+
+    /* ===== LIGHTBOX ===== */
+    .lb-overlay {
+      display: none; position: fixed; inset: 0;
+      background: rgba(0,0,0,0.94);
+      z-index: 9999; align-items: center; justify-content: center;
+      flex-direction: column;
+    }
+    .lb-overlay.open { display: flex; }
+
+    .lb-toolbar {
+      position: absolute; top: 0; left: 0; right: 0;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1rem 1.5rem;
+      background: linear-gradient(to bottom, rgba(0,0,0,0.7), transparent);
+    }
+
+    .lb-caption-top {
+      color: var(--white); font-size: 0.88rem;
+    }
+    .lb-caption-top strong {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.1rem; display: block;
+    }
+
+    .lb-close {
+      background: none; border: none;
+      color: var(--white); font-size: 1.5rem;
+      cursor: pointer; padding: 0.3rem;
+      transition: color 0.3s;
+    }
+    .lb-close:hover { color: var(--gold); }
+
+    .lb-img-wrap {
+      max-width: 92vw; max-height: 82vh;
+      display: flex; align-items: center; justify-content: center;
+    }
+
+    .lb-img {
+      max-width: 100%; max-height: 82vh;
+      object-fit: contain;
+      box-shadow: 0 20px 80px rgba(0,0,0,0.8);
+    }
+
+    .lb-nav {
+      position: absolute;
+      top: 50%; transform: translateY(-50%);
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      color: var(--white); font-size: 1.2rem;
+      width: 48px; height: 48px;
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer; transition: background 0.3s;
+    }
+    .lb-nav:hover { background: rgba(201,147,58,0.5); }
+    .lb-prev { left: 1.2rem; }
+    .lb-next { right: 1.2rem; }
+
+    .lb-counter {
+      position: absolute; bottom: 1.5rem;
+      left: 50%; transform: translateX(-50%);
+      font-size: 0.78rem; letter-spacing: 0.15em;
+      text-transform: uppercase; color: rgba(255,255,255,0.45);
+    }
+
+    /* ===== LOAD MORE ===== */
+    .load-more-wrap { text-align: center; padding: 1rem 0 4rem; }
+
+    .btn-load {
+      display: inline-flex; align-items: center; gap: 0.6rem;
+      background: transparent; border: 1.5px solid var(--green);
+      color: var(--green); font-family: 'DM Sans', sans-serif;
+      font-size: 0.85rem; font-weight: 600;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      padding: 0.85rem 2.4rem; cursor: pointer;
+      transition: background 0.3s, color 0.3s;
+    }
+    .btn-load:hover { background: var(--green); color: var(--white); }
+    .btn-load:disabled { opacity: 0.4; cursor: not-allowed; }
+
+    /* ===== FOOTER ===== */
+    .mini-footer {
+      background: var(--charcoal);
+      padding: 2rem 0;
+      text-align: center;
+    }
+    .mini-footer p {
+      font-size: 0.82rem; color: rgba(255,255,255,0.35);
+    }
+    .mini-footer a { color: var(--gold); }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 1024px) { .masonry { columns: 3; } }
+    @media (max-width: 768px)  { .masonry { columns: 2; } .lb-nav { display: none; } }
+    @media (max-width: 480px)  { .masonry { columns: 2; column-gap: 3px; } .masonry-item { margin-bottom: 3px; } }
+
+    /* ===== REVEAL ===== */
+    .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.6s var(--ease), transform 0.6s var(--ease); }
+    .reveal.visible { opacity: 1; transform: none; }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="container nav-inner">
+    <a href="index.html" class="nav-brand">
+      <img src="media/logo.png" alt="PCIS" onerror="this.style.display='none'">
+      <span class="brand-name">Proper Child International School</span>
+    </a>
+    <a href="index.html" class="nav-back"><i class="fas fa-arrow-left"></i> Back to Home</a>
+  </div>
+</nav>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <span class="ph-tag">Life at PCIS</span>
+    <h1 class="ph-title">School Gallery</h1>
+    <p class="ph-sub">Moments of learning, laughter, and growth — captured at Proper Child International School, Igbo Etche.</p>
+  </div>
+</div>
+
+<!-- FILTER BAR -->
+<div class="container">
+  <div class="filter-bar" id="filterBar">
+    <button class="filter-btn active" data-cat="all">All Photos</button>
+    <button class="filter-btn" data-cat="campus">Campus</button>
+    <button class="filter-btn" data-cat="classroom">Classroom</button>
+    <button class="filter-btn" data-cat="events">Events</button>
+    <button class="filter-btn" data-cat="sports">Sports</button>
+    <button class="filter-btn" data-cat="culture">Culture</button>
+  </div>
+</div>
+
+<!-- GALLERY -->
+<section class="gallery-section">
+  <div class="container">
+    <div class="masonry reveal" id="masonryGrid"></div>
+    <div class="empty-state" id="emptyState">
+      <i class="fas fa-images"></i>
+      <p>No photos in this category yet. Check back soon!</p>
+    </div>
+  </div>
+</section>
+
+<div class="load-more-wrap">
+  <button class="btn-load" id="loadMoreBtn">
+    <i class="fas fa-plus"></i> Load More Photos
+  </button>
+</div>
+
+<!-- LIGHTBOX -->
+<div class="lb-overlay" id="lbOverlay">
+  <div class="lb-toolbar">
+    <div class="lb-caption-top">
+      <strong id="lbTitle"></strong>
+      <span id="lbCatLabel"></span>
+    </div>
+    <button class="lb-close" id="lbClose"><i class="fas fa-times"></i></button>
+  </div>
+  <button class="lb-nav lb-prev" id="lbPrev"><i class="fas fa-chevron-left"></i></button>
+  <div class="lb-img-wrap">
+    <img src="" alt="" class="lb-img" id="lbImg">
+  </div>
+  <button class="lb-nav lb-next" id="lbNext"><i class="fas fa-chevron-right"></i></button>
+  <div class="lb-counter" id="lbCounter"></div>
+</div>
+
+<!-- MINI FOOTER -->
+<footer class="mini-footer">
+  <p>&copy; 2025 <a href="index.html">Proper Child International School</a> · Igbo Etche, Rivers State · All rights reserved.</p>
+</footer>
+
+<script>
+  /* ============================
+     GALLERY DATA
+     All 15 real images + metadata
+     ============================ */
+  const allPhotos = [
+    { src: 'gallery/image1.jpg',  title: 'Our School Building',         cat: 'campus',    size: 'tall'   },
+    { src: 'gallery/image2.jpg',  title: 'Classroom Session',           cat: 'classroom', size: 'wide'   },
+    { src: 'gallery/image3.jpg',  title: 'Learning Together',           cat: 'classroom', size: 'normal' },
+    { src: 'gallery/image4.jpg',  title: 'ICT & Computer Lab',          cat: 'classroom', size: 'normal' },
+    { src: 'gallery/image5.jpg',  title: 'School Library',              cat: 'campus',    size: 'normal' },
+    { src: 'gallery/image6.jpg',  title: 'Annual Sports Day',           cat: 'sports',    size: 'wide'   },
+    { src: 'gallery/image7.jpg',  title: 'Active Learners',             cat: 'classroom', size: 'normal' },
+    { src: 'gallery/image8.jpg',  title: 'Cultural Day Celebration',    cat: 'culture',   size: 'tall'   },
+    { src: 'gallery/image9.jpg',  title: 'School Assembly',             cat: 'events',    size: 'normal' },
+    { src: 'gallery/image10.jpg', title: 'Graduation Ceremony',         cat: 'events',    size: 'wide'   },
+    { src: 'gallery/image11.jpg', title: 'Science Practical',           cat: 'classroom', size: 'normal' },
+    { src: 'gallery/image12.jpg', title: 'Inter-House Sports',          cat: 'sports',    size: 'normal' },
+    { src: 'gallery/image13.jpg', title: 'Cultural Dance Performance',  cat: 'culture',   size: 'wide'   },
+    { src: 'gallery/image14.jpg', title: 'Prize Giving Day',            cat: 'events',    size: 'normal' },
+    { src: 'gallery/image15.jpg', title: 'Students on Campus',          cat: 'campus',    size: 'normal' },
+  ];
+
+  const catLabels = {
+    campus:    'Campus Life',
+    classroom: 'Classroom',
+    events:    'School Events',
+    sports:    'Sports',
+    culture:   'Culture & Arts',
+  };
+
+  let currentCat = 'all';
+  let visibleCount = 12;
+  let lightboxIndex = 0;
+  let filteredPhotos = [];
+
+  const grid = document.getElementById('masonryGrid');
+  const emptyState = document.getElementById('emptyState');
+  const loadMoreBtn = document.getElementById('loadMoreBtn');
+
+  function getFiltered() {
+    return currentCat === 'all' ? allPhotos : allPhotos.filter(p => p.cat === currentCat);
+  }
+
+  function renderGrid() {
+    filteredPhotos = getFiltered();
+    const visible = filteredPhotos.slice(0, visibleCount);
+
+    grid.innerHTML = '';
+
+    if (filteredPhotos.length === 0) {
+      emptyState.style.display = 'block';
+      grid.style.display = 'none';
+      loadMoreBtn.style.display = 'none';
+      return;
+    }
+
+    emptyState.style.display = 'none';
+    grid.style.display = '';
+
+    visible.forEach((photo, i) => {
+      const item = document.createElement('div');
+      item.className = 'masonry-item';
+      item.dataset.index = allPhotos.indexOf(photo);
+      item.innerHTML = `
+        <img
+          src="${photo.src}"
+          alt="${photo.title}"
+          loading="${i < 8 ? 'eager' : 'lazy'}"
+          onerror="this.parentElement.style.display='none'"
+        >
+        <div class="masonry-zoom"><i class="fas fa-expand-alt"></i></div>
+        <div class="masonry-caption">
+          <div class="mc-title">${photo.title}</div>
+          <div class="mc-tag">${catLabels[photo.cat] || ''}</div>
+        </div>
+      `;
+      item.addEventListener('click', () => openLightbox(i, visible));
+      grid.appendChild(item);
+    });
+
+    // Load more button
+    if (visibleCount >= filteredPhotos.length) {
+      loadMoreBtn.disabled = true;
+      loadMoreBtn.innerHTML = '<i class="fas fa-check"></i> All Photos Loaded';
+    } else {
+      loadMoreBtn.disabled = false;
+      loadMoreBtn.innerHTML = `<i class="fas fa-plus"></i> Load More (${filteredPhotos.length - visibleCount} remaining)`;
+    }
+  }
+
+  /* ---- FILTER ---- */
+  document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelector('.filter-btn.active').classList.remove('active');
+      btn.classList.add('active');
+      currentCat = btn.dataset.cat;
+      visibleCount = 12;
+      renderGrid();
+      grid.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  });
+
+  /* ---- LOAD MORE ---- */
+  loadMoreBtn.addEventListener('click', () => {
+    visibleCount += 8;
+    renderGrid();
+  });
+
+  /* ---- LIGHTBOX ---- */
+  const lbOverlay = document.getElementById('lbOverlay');
+  const lbImg     = document.getElementById('lbImg');
+  const lbTitle   = document.getElementById('lbTitle');
+  const lbCat     = document.getElementById('lbCatLabel');
+  const lbCounter = document.getElementById('lbCounter');
+  let lbPool = [];
+
+  function openLightbox(idx, pool) {
+    lbPool = pool;
+    lightboxIndex = idx;
+    showLbSlide();
+    lbOverlay.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function showLbSlide() {
+    const p = lbPool[lightboxIndex];
+    lbImg.src = p.src;
+    lbImg.alt = p.title;
+    lbTitle.textContent = p.title;
+    lbCat.textContent = catLabels[p.cat] || '';
+    lbCounter.textContent = `${lightboxIndex + 1} / ${lbPool.length}`;
+  }
+
+  document.getElementById('lbPrev').addEventListener('click', () => {
+    lightboxIndex = (lightboxIndex - 1 + lbPool.length) % lbPool.length;
+    showLbSlide();
+  });
+
+  document.getElementById('lbNext').addEventListener('click', () => {
+    lightboxIndex = (lightboxIndex + 1) % lbPool.length;
+    showLbSlide();
+  });
+
+  document.getElementById('lbClose').addEventListener('click', closeLb);
+  lbOverlay.addEventListener('click', e => { if (e.target === lbOverlay) closeLb(); });
+
+  function closeLb() {
+    lbOverlay.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  document.addEventListener('keydown', e => {
+    if (!lbOverlay.classList.contains('open')) return;
+    if (e.key === 'Escape')     closeLb();
+    if (e.key === 'ArrowLeft')  { lightboxIndex = (lightboxIndex - 1 + lbPool.length) % lbPool.length; showLbSlide(); }
+    if (e.key === 'ArrowRight') { lightboxIndex = (lightboxIndex + 1) % lbPool.length; showLbSlide(); }
+  });
+
+  /* ---- TOUCH SWIPE on lightbox ---- */
+  let touchStartX = 0;
+  lbOverlay.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; });
+  lbOverlay.addEventListener('touchend', e => {
+    const dx = e.changedTouches[0].clientX - touchStartX;
+    if (Math.abs(dx) > 50) {
+      lightboxIndex = dx < 0
+        ? (lightboxIndex + 1) % lbPool.length
+        : (lightboxIndex - 1 + lbPool.length) % lbPool.length;
+      showLbSlide();
+    }
+  });
+
+  /* ---- INIT ---- */
+  renderGrid();
+
+  /* ---- SCROLL REVEAL ---- */
+  const reveals = document.querySelectorAll('.reveal');
+  new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
+  }, { threshold: 0.1 }).observe ? reveals.forEach(el => {
+    new IntersectionObserver((ents) => {
+      ents.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.1 }).observe(el);
+  }) : reveals.forEach(el => el.classList.add('visible'));
+</script>
+</body>
+</html>
